@@ -7,6 +7,114 @@
   <title>Barbershop Borodinsky</title>
 </head>
 <body>
-
+  <header class="main-header">
+    <div class="container">
+      <nav class="main-navigation">
+        <ul>
+          <li><a href="#">Information</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Price list</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="user-block">
+        <a class="login" href="#"></a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="index-logo">
+      <img src="img/index-logo.png" width="368" height="204" alt="Barbershop Borodinsky">
+    </div>
+    <section class="features">
+      <div class="features-item">
+        <b class="features-name">Fast</b>
+        <p>We do our work fast! Two hours will pass unnoticed and you - the happy owner of a stylish minute-haircut</p>
+      </div>
+      <div class="features-item">
+        <b class="features-name">Cool</b>
+        <p>Forget how you cut your hair before. We will make you a football or movie star! In any case, outwardly.</p>
+      </div>
+      <div class="features-item">
+        <b class="features-name">Expensive</b>
+        <p>Our masters are professionals in their field and can not be cheap. Besides, doesn't the price give a certain status?</p>
+      </div>
+    </section>
+    <div class="index-content">
+      <div class="index-content-left">
+        <h2 class="index-content-title">News</h2>
+        <ul class="news-preview">
+          <li>
+            <p>We finally brought Jagermeister! Now you can skip a glass during the haircut</p>
+            <time datetime="2016-01-11">JAN 11</time>
+          </li>
+          <li>
+            <p>In our team recruiting, Boris "Razor" Strigunets, winner of many titles and awards joined our slender ranks</p>
+            <time datetime="2016-01-18">JAN 18</time>
+          </li>
+        </ul>
+        <a class="btn" href="#">All news</a>
+      </div>
+      <div class="index-content-right">
+        <h2 class="index-content-title">Photo Gallery</h2>
+        <div class="gallery">
+          <figure class="gallery-content">
+            <img src="img/photo-1.jpg" width="286" height="164" alt="gallery">
+          </figure>
+          <button class="btn gallery-prev" type="button" name="button">Previous</button>
+          <button class="btn gallery-next" type="button" name="button">Next</button>
+        </div>
+      </div>
+    </div>
+    <div class="index-content">
+      <div class="index-content-left">
+        <h2 class="index-content-title">Contact information</h2>
+        <p>
+          Барбершоп «Бородинский»<br>
+          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+          Телефон: +7 (812) 666-02-66
+        </p>
+        <p>
+            Working hours:<br>
+          пн — пт: с 10:00 до 22:00<br>
+          сб — вс: с 10:00 до 19:00
+        </p>
+        <a class="btn" href="#">How to get to</a>
+        <a class="btn" href="#">Feedback</a>
+      </div>
+      <div class="index-content-right">
+        <h2 class="index-content-title">Sign on</h2>
+       <p>Specify the desired date and time and we will contact you to confirm your reservation</p>
+       <form class="appointment-form" action="index.html" method="post">
+         <input type="text" name="date" value="" placeholder="Date">
+         <input type="text" name="time" value="" placeholder="Time">
+         <input type="text" name="name" value="" placeholder="Your name">
+         <input type="tel" name="phone" value="" placeholder="Phone">
+         <button class="btn" type="submit">Send</button>
+       </form>
+      </div>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      <section class="footer-contacts">
+        Барбершоп «Бородинский»<br>
+         Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+         <a href="#">Как нас найти?</a><br>
+         Телефон: +7 (812) 666-02-66
+      </section>
+      <section class="footer-social">
+        <p>Let's be friends!</p>
+        <a class="social-btn social-btn-vk" href="#">VK</a>
+        <a class="social-btn social-btn-fb" href="#">FB</a>
+        <a class="social-btn social-btn-inst" href="#">Inst</a>
+      </section>
+      <section class="footer-copyright">
+        <p>Developed by:</p>
+        <a class="btn" href="#">HTML Academy</a>
+      </section>
+    </div>
+  </footer>
 </body>
 </html>
