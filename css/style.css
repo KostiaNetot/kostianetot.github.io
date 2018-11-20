@@ -1,0 +1,17 @@
+body {
+  background: black /*url("../img/tint.jpg") no-repeat*/;
+  color: white;
+  font: bold 14px PT Sans Narrow;
+}
+
+nav {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 30px;
+}
