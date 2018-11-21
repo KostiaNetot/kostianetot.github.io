@@ -50,6 +50,39 @@ nav {
   margin-top: 20px;
 }
 
+.top-slide {
+  background: url(img/slider_bg.jpg) no-repeat;
+  padding-top: 120px;
+  padding-bottom: 300px;
+}
+
+.top-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.top-slide h2 {
+  text-transform: uppercase;
+  background: #ffea00;
+  display: inline;
+  font-size: 70px;
+  padding: 0 13px;
+}
+
+.top-slide :nth-child(2) {
+  margin-bottom: 10px;
+}
+
+ .top-slide p {
+   background: #414146;
+   display: inline;
+   font-size: 24px;
+   padding: 0 4px;
+   color: #ffffff;
+ }
+
+
+
 @media screen and (max-width: 420px) {
   .header-container {
     width: 100%;
