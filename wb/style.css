@@ -81,7 +81,38 @@ nav {
    color: #ffffff;
  }
 
+ .specialize-container {
+   width: 80%;
+   margin: 0 auto;
+   text-align: center;
+ }
 
+.specialize-container h3 {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.specialize-container p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.first-p {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.bottom-card {
+  background: #414146;
+  position: relative;
+  top: -30px;
+}
+
+.specialize-cards {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media screen and (max-width: 420px) {
   .header-container {
