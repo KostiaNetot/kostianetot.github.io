@@ -190,10 +190,6 @@ main {
     border-radius: 50%;
 }
 
-.dishes h2 {
-    padding-left: 15px;
-}
-
 .section {
     margin: 0;
     background-color: #f1f0f1;
@@ -201,8 +197,32 @@ main {
 
 .section .col-6 {
     width: 50%;
-    float: left;
-    
+    float: left;    
+}
+
+.dishes h2 {
+    padding-left: 15px;
+}
+
+.dishes .col-4 {
+    position: relative;
+}
+
+.dishes .col-4::after {
+    position: absolute;
+    bottom: -56px;
+    right: 0;
+    display: block;
+    content: "+";
+    width: 36px;
+    height: 36px;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #2e2d2d;
+    cursor: pointer;
 }
 /*\Main*/
 
