@@ -18,6 +18,13 @@ body {
   color: #969696;
 }
 
+h2 {
+    font: 36px 'Economica', sans-serif;
+    line-height: 48px;
+    color: #535151;
+    margin-bottom: 20px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -34,7 +41,6 @@ ul {
 .container {
   width: 1170px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 .row {
@@ -53,10 +59,11 @@ ul {
 }
 
 .btn-border {
-  width: 95px;
-  height: 35px;
-  line-height: 35px; 
-  border: 1px solid #939393;
+    width: 95px;
+    height: 35px;
+    line-height: 35px;
+    padding: 3px 30px 7px;
+    border: 1px solid #939393;
 }
 /*Header*/
 header {
@@ -71,6 +78,30 @@ a.logo {
   width: 270px;
   height: 113px;
   background-color: #2e2d2d;
+}
+
+.logo div {
+    float: left;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.logo h1 {
+    font: 900 48px 'Economica', sans-serif;
+    text-transform: uppercase;
+    line-height: 76px;
+    margin-top: 16px;
+    border-right: 1px solid #4c4b4b;
+}
+
+.logo p {
+    font: 18px 'Economica', sans-serif; 
+    padding-top: 42px;
+}
+
+.logo-text {
+
 }
 
 nav {
@@ -95,16 +126,48 @@ main {
   min-height: 200px;
 }
 
+.services {
+    color: #fff;
+    text-align: center;
+}
+
+.services .description {
+    width: 370px;
+    height: 305px;
+}
+
 .services .col-4:nth-child(1) {
-  background-color: #aad4b3;
+    background: #aad4b3 url(../img/flatware.png) no-repeat;
+    background-position: center 345px;
+    
 }
 
 .services .col-4:nth-child(2) {
-  background-color: #86cdd7;
+    background: #86cdd7 url(../img/apple.png) no-repeat;
+    background-position: center 40px;
 }
 
 .services .col-4:nth-child(3) {
-  background-color: #ffe5b9;
+    background: #ffe5b9 url(../img/glass.png) no-repeat;
+    background-position: center 345px;
+}
+
+.services img {
+    display: block;
+}
+
+.services h2 {
+    color: #fff;
+    padding-top: 128px;
+}
+
+.services a {
+    display: block;
+    width: 196px; 
+    margin: 0 auto;
+/*    margin-top: 13px;*/
+    padding-top: 14px;
+    border-top: 1px dashed #fff;
 }
 
 .features .col-4 {
@@ -112,17 +175,31 @@ main {
 }
 
 .features .numbers {
-  display: inline-block;
-  font-size: 40px;
-  width: 120px;
-  height: 120px;
-  border: 1px solid #adacac;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 120px;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
+    border: 1px solid #adacac;
+    border-radius: 50%;
 }
+
+.features p {
+    margin-bottom: 25px;
+}
+
+
+.dishes h2 {
+    padding-left: 15px;
+}
+
 /*\Main*/
 
 /*Footer*/
 footer {
-  min-height: 140px;
-  background-color: #adacac;
+    min-height: 140px;
+    background-color: #adacac;
 }
 /*\Footer*/
