@@ -38,6 +38,10 @@ ul {
   list-style-type: none;
 }
 
+p {
+    margin-bottom: 25px;
+}
+
 .container {
   width: 1170px;
   margin: 0 auto;
@@ -186,15 +190,20 @@ main {
     border-radius: 50%;
 }
 
-.features p {
-    margin-bottom: 25px;
-}
-
-
 .dishes h2 {
     padding-left: 15px;
 }
 
+.section {
+    margin: 0;
+    background-color: #f1f0f1;
+}
+
+.section .col-6 {
+    width: 50%;
+    float: left;
+    
+}
 /*\Main*/
 
 /*Footer*/
