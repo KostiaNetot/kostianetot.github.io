@@ -369,6 +369,10 @@ footer .social {
     margin-right: 13px;
     background-color: #dddddd;
     border-radius: 50%;
+    
+    background-image: url(../img/tw.png);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .social .mail {
