@@ -39,7 +39,7 @@ ul {
 }
 
 p {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .container {
@@ -185,6 +185,7 @@ main {
     text-align: center;
     width: 120px;
     height: 120px;
+    padding-left: 8px;
     margin-bottom: 25px;
     border: 1px solid #adacac;
     border-radius: 50%;
@@ -197,7 +198,21 @@ main {
 
 .section .col-6 {
     width: 50%;
-    float: left;    
+    float: left;  
+    padding: 45px 0;
+}
+
+.section .col-6:first-child {
+    padding-left: 90px;
+    padding-right: 25px;
+}
+
+.section .col-6:first-child p {
+    margin-bottom: 21px;
+}
+
+.section .col-6:last-child {
+    padding-right: 125px;
 }
 
 .dishes h2 {
@@ -224,11 +239,139 @@ main {
     background-color: #2e2d2d;
     cursor: pointer;
 }
+
+.testimonials {
+    margin-top: 108px;
+}
+
+.testimonials .face,
+.testimonials p,
+.testimonials a {
+    float: left;
+}
+
+.feedback {
+    position: relative;
+}
+
+.feedback::before {
+    position: relative;
+    display: block;
+    width: 27px;
+    height: 20px;
+    top: 18px;
+    left: 315px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #535151;
+    content: "\201C";
+}
+
+.feedback img {
+    margin-right: 16px;
+}
+
+
+.feedback p {
+    width: 210px;
+    margin-bottom: 15px;    
+}
+
+.feedback b {
+    font-size: 16px;
+}
+
+.feedback a {
+    position: relative;
+    float: right;
+}
+
+.feedback a::after {
+    position: absolute;
+    display: block;
+    top: -7px;
+    left: -13px;
+    width: 13px;
+    height: 18px;
+    content: ">";
+    font-size: 30px;
+    font-weight: 900;
+    color: #a4a4a4;
+}
+
+.news .date,
+.news p {
+    float: left;
+}
+
+.news .date {
+    width: 70px;
+    height: 91px;
+    padding-top: 14px;
+    margin-right: 28px;
+    font: 24px 'Economica', sans-serif;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #303030;
+}
+
+.news b {
+    font-size: 18;
+    font-weight: normal;
+}
+
+.news p {
+    width: 228px;
+}
+
+
+
+.hours li {
+    width: 370px;
+    padding-left: 65px;
+    margin-bottom: 4px;
+    font: 24px 'Economica', sans-serif;
+    line-height: 67px;
+    color: #fff;
+    background-color: #303030;
+}
+
+.hours span {
+    font-size: 40px;
+}
 /*\Main*/
 
 /*Footer*/
 footer {
-    min-height: 140px;
+/*    min-height: 140px;*/
+    padding: 45px 0;
     background-color: #adacac;
+    color: #fff;
+}
+
+footer .copyright {
+    float: left;
+}
+
+.copyright span {
+    font-size: 18px;
+}
+
+footer .social {
+    float: right;
+}
+
+.social a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 13px;
+    background-color: #dddddd;
+    border-radius: 50%;
+}
+
+.social .mail {
+    margin-right: 0;
 }
 /*\Footer*/
