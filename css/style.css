@@ -81,31 +81,24 @@ a.logo {
   float: left;
   width: 270px;
   height: 113px;
+  color: #fff;
   background-color: #2e2d2d;
 }
 
-.logo div {
-    float: left;
-    width: 50%;
-    text-align: center;
-    color: #fff;
-}
-
 .logo h1 {
+    float: left;
     font: 900 48px 'Economica', sans-serif;
     text-transform: uppercase;
     line-height: 76px;
-    margin-top: 16px;
+    padding: 16px 22px;
     border-right: 1px solid #4c4b4b;
 }
 
 .logo p {
+    float: left;
     font: 18px 'Economica', sans-serif; 
     padding-top: 42px;
-}
-
-.logo-text {
-
+    padding-left: 17px;
 }
 
 nav {
@@ -136,24 +129,55 @@ main {
 }
 
 .services .description {
+    position: relative;
     width: 370px;
     height: 305px;
 }
 
 .services .col-4:nth-child(1) {
-    background: #aad4b3 url(../img/flatware.png) no-repeat;
-    background-position: center 345px;
+    background-color: #aad4b3;
     
 }
 
 .services .col-4:nth-child(2) {
-    background: #86cdd7 url(../img/apple.png) no-repeat;
-    background-position: center 40px;
+    background-color: #86cdd7;
 }
 
 .services .col-4:nth-child(3) {
-    background: #ffe5b9 url(../img/glass.png) no-repeat;
-    background-position: center 345px;
+    background-color: #ffe5b9;
+}
+
+.services .descr-1::before {
+    position: absolute;
+    top: 40px;
+    left: 154px;
+    display: block;
+    content: "";
+    width: 57px;
+    height: 66px;
+    background: url(../img/Sprites.png) -9px -86px;
+} 
+
+.services .descr-2::before {
+    position: absolute;
+    top: 40px;
+    left: 154px;
+    display: block;
+    content: ""; 
+    width: 70px;
+    height: 57px;
+    background: url(../img/Sprites.png) -11px -11px;
+}
+
+.services .descr-3::before {
+    position: absolute;
+    top: 40px;
+    left: 154px;
+    display: block;
+    content: "";  
+    width: 56px;
+    height: 64px;
+    background: url(../img/Sprites.png) -99px -9px;
 }
 
 .services img {
@@ -161,17 +185,20 @@ main {
 }
 
 .services h2 {
+    display: inline-block;
+    width: 195px;
     color: #fff;
     padding-top: 128px;
+    padding-bottom: 18px;
+    margin-bottom: 13px;
+    border-bottom: 1px dashed #fff;
 }
 
 .services a {
     display: block;
-    width: 196px; 
     margin: 0 auto;
-/*    margin-top: 13px;*/
-    padding-top: 14px;
-    border-top: 1px dashed #fff;
+/*    padding-top: 14px;*/
+/*    border-top: 1px dashed #fff;*/
 }
 
 .features .col-4 {
@@ -219,11 +246,12 @@ main {
     padding-left: 15px;
 }
 
-.dishes .col-4 {
+.dishes a {
+    display: block;
     position: relative;
 }
 
-.dishes .col-4::after {
+.dishes a::after {
     position: absolute;
     bottom: -56px;
     right: 0;
@@ -237,30 +265,31 @@ main {
     text-align: center;
     color: #fff;
     background-color: #2e2d2d;
-    cursor: pointer;
 }
 
 .testimonials {
+    position: relative;
     margin-top: 108px;
 }
 
 .testimonials .face,
+.testimonials h4,
 .testimonials p,
 .testimonials a {
     float: left;
 }
 
 .feedback {
-    position: relative;
+    
 }
 
-.feedback::before {
+.testimonials::before {
     position: relative;
     display: block;
     width: 27px;
     height: 20px;
-    top: 18px;
-    left: 315px;
+    top: 83px;
+    left: 336px;
     font-size: 40px;
     font-weight: 900;
     color: #535151;
@@ -277,7 +306,7 @@ main {
     margin-bottom: 15px;    
 }
 
-.feedback b {
+.feedback h4 {
     font-size: 16px;
 }
 
@@ -309,6 +338,7 @@ main {
     height: 91px;
     padding-top: 14px;
     margin-right: 28px;
+    margin-bottom: 28px;
     font: 24px 'Economica', sans-serif;
     line-height: 30px;
     text-align: center;
@@ -316,7 +346,7 @@ main {
     background-color: #303030;
 }
 
-.news b {
+.news h5 {
     font-size: 18;
     font-weight: normal;
 }
