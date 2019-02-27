@@ -25,6 +25,11 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    font-size: 18;
+    font-weight: normal;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -346,11 +351,6 @@ main {
     background-color: #303030;
 }
 
-.news h5 {
-    font-size: 18;
-    font-weight: normal;
-}
-
 .news p {
     width: 228px;
 }
@@ -369,6 +369,22 @@ main {
 
 .hours span {
     font-size: 40px;
+}
+
+.main-menu .col-4 {
+    background-color: #f1f0f1;
+    margin-bottom: 30px;
+}
+
+.main-menu img {
+    display: block;
+}
+
+.main-menu h3 {
+    margin-bottom: 22px;
+}
+.main-menu .item-description {
+    padding: 30px 40px 30px 23px; 
 }
 /*\Main*/
 
