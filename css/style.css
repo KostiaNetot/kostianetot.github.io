@@ -376,6 +376,10 @@ main {
     margin-bottom: 30px;
 }
 
+.main-menu .col-4:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .main-menu img {
     display: block;
 }
