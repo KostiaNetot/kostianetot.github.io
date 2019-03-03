@@ -360,8 +360,6 @@ main {
     width: 228px;
 }
 
-
-
 .hours li {
     width: 370px;
     padding-left: 65px;
@@ -394,6 +392,120 @@ main {
 }
 .main-menu .item-description {
     padding: 30px 40px 30px 23px; 
+}
+
+.content {
+    float: left;
+    width: 770px;
+    margin-bottom: 40px;
+}
+
+section {
+    padding-top: 35px;    
+}
+
+.reserv-img,
+.reserv-text1 {
+    float: left;
+}
+
+.reserv-text1 {
+    width: 370px;
+    padding-left: 30px;
+}
+
+.aisde {
+    float: right;
+    width: 370px;
+    padding-top: 35px;
+}
+
+.aside-reserv h4 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.blog-content {
+    width: 670px;
+}
+
+.blog-content h3 {
+    font-size: 24px;
+    color: #535151;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.table td {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.table i {
+    padding-right: 25px;
+}
+
+.table .td-3 {
+    text-align: right;
+}
+
+.td-2 i,
+.td-2 span {
+    padding-right: 10px;    
+}
+
+.categories {
+    margin-bottom: 97px;
+}
+
+.categories h2 {
+    margin-bottom: 5px;
+}
+
+.categories-list li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: light;
+}
+
+.categories-list li::before {
+    position: absolute;
+    display: block;
+    left:  0;
+    top: 10px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #adacac;
+    border-radius: 50%;
+}
+
+.recent-item img,
+.recent-item .recent-text {
+    float: left;
+}
+
+.recent-item {
+    margin-bottom: 40px;
+}
+
+.recent-text {
+    width: 215px;
+    padding-left: 20px;
+}
+
+.recent-text h4 {
+    margin-bottom: 8px;
 }
 /*\Main*/
 
