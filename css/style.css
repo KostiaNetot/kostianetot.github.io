@@ -507,6 +507,34 @@ section {
 .recent-text h4 {
     margin-bottom: 8px;
 }
+
+.contacts-contain h2 {
+    padding-top: 45px;
+}
+
+.find {
+    margin-bottom: 25px;    
+}
+
+.find img,
+.find .contact-info {
+    float: left;
+    line-height: 30px;
+}
+
+.find .contact-info {
+    padding-left: 30px;
+}
+
+.contact-form {
+    background-color: #f1f0f1;
+}
+
+textarea {
+    display: block;
+}
+
+
 /*\Main*/
 
 /*Footer*/
