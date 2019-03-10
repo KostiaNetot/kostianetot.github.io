@@ -12,7 +12,7 @@
 }
 
 .label-wrap {
-   width: 800px;
+    width: 800px;
     height: 370px;
     background-color: #D6D6D6;
     border-radius:185px;
@@ -25,7 +25,7 @@ input.checkbox {
 }
 
 .label-wrap label {
-   display: block;
+    display: block;
     width: 350px;
     height: 350px;
     background-color: #F7F7F7;
@@ -39,6 +39,6 @@ input.checkbox {
 }
 
 
-.wrap .checkbox:checked ~ label {
-    transform: translateX(300px);
+.wrap .checkbox:checked ~ .label-wrap label {
+    transform: translateX(430px);
 }
