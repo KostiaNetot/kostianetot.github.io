@@ -63,17 +63,40 @@
           <div class="aisde aside-reserv">
               <h2>Our Hours</h2>
               <h4>We are open 7 days a week - 8 AM to 12 PM <br> +1 101 889 9898</h4>
-              <form action="" name="reservation-form">
-                  <input type="name" value="Name:">
-                  <input type="email" value="Email:">
-                  Check-in<input type="date">
-                  Check-out<input type="date">
-                  <input type="number">
-                  <textarea name="" id="" cols="30" rows="10">
-                      Message:
-                  </textarea>
-                  <a href="#" class="btn btn-border">clear</a>
-                  <a href="#" class="btn btn-border">send</a>
+              <form action="">
+                  <input type="text" placeholder="Name:">
+                  <input type="email" placeholder="Email:">
+                  <label for="">Check-in:<input type="text"></label>
+                  <label for="">Check-out:<input type="text"></label>
+                  <label for="adult">Adult    
+                      <select name="adult" id="adult">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                      </select>
+                  </label>
+                  <label for="children">Children    
+                      <select name="children" id="adult">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                      </select>
+                  </label>
+                  <textarea name="textarea" id="" cols="" rows="" placeholder="Message:"></textarea>
+                  <button type="reset">clear</button>
+                  <button type="submit">send</button>
               </form>
           </div>    
       </div>   

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Economica:400,400i,700,700i');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+/*    display: block;*/
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font: 300 14px/20px 'Open Sans', sans-serif; 
+    
+}
+
+header {
+    display: flex;
+    height: 8vh;
+    padding: 0 5%;
+    background-color: #ACC8DD;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Economica', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    
+}
+
+header p {
+   font-size: 17px;
+    cursor: pointer;
+}
+
+header .fa-mobile-alt {
+    padding-right: 5px;
+}
+
+main {
+    display: flex;
+    height: 92vh;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 5%;
+    background: url(img/main-1.jpg) no-repeat;
+    background-size: cover;
+}
+
+/*
+main label {
+    text-transform: uppercase;
+    font-family: 'Economica', sans-serif;
+    font-weight: 700;
+    padding: 8px 16px;
+    line-height: 36px;
+    border: 2px solid #fff;
+    border-radius: 17px;
+    cursor: pointer;
+}
+*/
+
+.nav {
+    width: 130px;
+}
+
+.submenu {
+    width: 130px;    
+    display: flex;
+    flex-direction: column;
+/*    transform: scaleY(0);*/
+/*    opacity: 1;*/
+/*    display: none;*/
+}
+
+.submenu li,
+.menu-btn {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Economica', sans-serif;
+    font-weight: 700;
+    padding: 8px 16px;
+    margin-top: 25px;
+    border: 2px solid #fff;
+    border-radius: 17px;
+    transition: .3s;
+}
+
+.submenu {
+/*    transform: scaleY(0);*/
+/*    transform-origin: 0 0;*/
+/*    transition: .3s;*/
+    position: relative;
+    top: 0;
+    left: -185px;
+    display: none;
+    transition: .4s;
+}
+
+.nav li:hover .submenu {
+/*    transform: scaleY(1);  */
+    transform: translateX(185px);
+    display: block;
+}
+
+.submenu li:hover {
+    transform: translateX(20px);
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2A5566;
+    padding: 0 5%;
+    color: #fff;
+}
+
+footer p {
+    font-size: 10px;
+    line-height: 13px;
+}
+
+footer .social  {
+    display: flex;
+} 
+
+.social a {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin-left: 13px;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+    background-color: #B0CBE0;
+    border-radius: 50%;
+}
