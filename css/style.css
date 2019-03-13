@@ -423,7 +423,74 @@ section {
 .aside-reserv h4 {
     font-size: 16px;
     font-weight: normal;
+    margin-bottom: 40px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    font: inherit;
+    height: 28px;
+    margin-bottom: 12px;
+    background-color: #FDFDFD;
+    border: 1px solid #F4F4F4;
+    padding-left: 10px;
+}
+
+.persons-numb {
+    display: flex;
+}
+
+.check-in,
+.check-out {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check-in input,
+.check-out input {
+    width: 280px;    
+}
+
+.persons-numb {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+
+.persons-numb label {
+    margin-right: 10px;    
+}
+
+form textarea {
+    height: 145px;
+    font: inherit;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #F4F4F4;
+    resize: none;
+}    
+
+form .btn-section {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.btn-section button {
+    width: 95px;
+    height: 35px;
+    font: 20px 'Economica', sans-serif;
+    line-height: 27px;
+    padding: 3px 30px 7px;
+    background-color: #fff;
+    border: 1px solid #939393;
+    cursor: pointer;
+}
+
 
 .blog-content {
     width: 670px;

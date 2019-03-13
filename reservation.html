@@ -66,37 +66,48 @@
               <form action="">
                   <input type="text" placeholder="Name:">
                   <input type="email" placeholder="Email:">
-                  <label for="">Check-in:<input type="text"></label>
-                  <label for="">Check-out:<input type="text"></label>
-                  <label for="adult">Adult    
-                      <select name="adult" id="adult">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                      </select>
-                  </label>
-                  <label for="children">Children    
-                      <select name="children" id="adult">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                      </select>
-                  </label>
+                  <div class="check-in">
+                      <label for="">Check-in: </label><input type="datetime" placeholder="13/03/2019">
+                  </div>
+                  <div class="check-out">
+                      <label for="">Check-out:</label><input type="datetime" placeholder="13/03/2020">
+                  </div>
+                  <div class="persons-numb">
+                      <p>
+                          <label for="adult">Adult</label>   
+                          <select name="adult" id="adult">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                          </select>    
+                      </p>
+                      
+                      <p>
+                          <label for="children">Children</label> <select name="children" id="adult">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                          </select>
+                      </p>
+                      
+                  </div>
                   <textarea name="textarea" id="" cols="" rows="" placeholder="Message:"></textarea>
-                  <button type="reset">clear</button>
-                  <button type="submit">send</button>
+                  <div class="btn-section">
+                      <button type="reset">clear</button>
+                      <button type="submit">send</button>
+                  </div>
               </form>
           </div>    
       </div>   
