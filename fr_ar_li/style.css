@@ -23,8 +23,8 @@ body {
 
 header {
     display: flex;
-    height: 12vh;
-    padding: 0 5%;
+/*    height: 12vh;*/
+    padding: 1% 5%;
     background-color: #ACC8DD;
     color: #fff;
     justify-content: space-between;
@@ -161,8 +161,9 @@ footer .social  {
 
 @media screen and (max-width:760px) {
     header {
-    height: 14vh;    
+/*    height: 14vh;    */
     display: flex;
+    padding: 3% 5%;    
     flex-direction: column;    
     color: #fff;
     justify-content: center;
