@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta name=viewport content="width=device-width, initial-scale=1.0">
-
     <meta charset="UTF-8">
-    <title>Fresh Art Line Studio</title>
+    <title>Test Slide Fresh Art Line Studio</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="#"><h1>Fresh Art Line Studio</h1></a>
+        <a href="#"><h1>FRESH ART LINE STUDIO</h1></a>
         <p><i class="fas fa-mobile-alt"></i>+345555555555</p>     
     </header>
-       
     <main>
-       <ul class="nav">
-           <li><a href="#" class="menu-btn">Меню</a>
-               <ul class="submenu">
-                    <li><a href="">Lorem ipsum</a></li>
-                    <li><a href="">Lorem</a></li>
-                    <li><a href="">Lorem ipsum</a></li>
-                    <li><a href="">ipsum</a></li>
-               </ul>
-           </li>
-       </ul>   
-    </main> 
-       
+        <div class="container">
+            <ul class="nav">
+                <li><a href="#" class="menu-btn"><span>Меню</span><i class="fas fa-bars"></i></a>
+                   <ul class="submenu">
+                        <li><a href="">О нас</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Блог</a></li>
+                        <li><a href="">Контакты</a></li>
+                   </ul>
+                </li>
+           </ul>   
+        </div>
+    </main>
     <footer>
         <p>Developed by pugjazz@gmail.com <br>
            for Fresh Art Line Studio <br>
@@ -40,5 +39,19 @@
         </ul> 
     </footer>
     
+    <script src="easy_background.js"></script>
+
+  <script>
+    easy_background("body",
+
+      {
+        slide: ["img/11.jpg", "img/12.jpg", "img/13.jpg", "img/14.jpg"],
+
+        delay: [5000, 5000, 5000, 5000]
+      }
+
+
+    );
+  </script>      
 </body>
 </html>
