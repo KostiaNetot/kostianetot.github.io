@@ -164,11 +164,21 @@ footer .social  {
 /*    height: 14vh;    */
     display: flex;
     padding: 3% 5%;    
-    flex-direction: column;    
+/*    flex-direction: column;    */
     color: #fff;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
 }  
+    
+    header h1 {
+        font-size: 38px;
+        letter-spacing: 0;
+    }
+    
+    header p {
+        display: none;
+    }
+    
     .nav span {
     display: none;
 }
