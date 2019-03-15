@@ -166,7 +166,7 @@ footer .social  {
     padding: 3% 5%;    
 /*    flex-direction: column;    */
     color: #fff;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-end;
 }  
     
@@ -176,7 +176,12 @@ footer .social  {
     }
     
     header p {
-        display: none;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        bottom: 0;
+        background-color: #ACC8DD;        
     }
     
     .nav span {
@@ -185,5 +190,9 @@ footer .social  {
     .nav .fa-bars {
     display: inline-block;
 }
+    
+    footer {
+        padding-bottom: 40px;
+    }
 
 }
