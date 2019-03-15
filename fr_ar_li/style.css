@@ -53,79 +53,134 @@ header .fa-mobile-alt {
     display: flex;
     height: 92vh;
     color: #fff;
-    padding-top: 20px;
-    padding-left: 5%;
-/*
-    background: url(img/main-1.jpg) no-repeat;
-    background-size: cover;
-*/ 
 }
 
-/*
-main label {
-    text-transform: uppercase;
+.wrap-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 27px;
+    margin-left: 60px;
+    width: 190px;
+    height: 400px;
     font-family: 'Economica', sans-serif;
+    font-size: 30px;
     font-weight: 700;
-    padding: 8px 16px;
-    line-height: 36px;
-    border: 2px solid #fff;
-    border-radius: 17px;
-    cursor: pointer;
-}
-*/
-
-.nav {
-/*    width: 130px;*/
-    margin-top: 22px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+/*    background-color: rgba(42,85,102, 0.5);*/
 }
 
-.nav .fa-bars {
+.wrap-menu input {
     display: none;
 }
 
-.submenu {
-/*    width: 130px;    */
-    display: flex;
-    flex-direction: column;
-/*    transform: scaleY(0);*/
-/*    opacity: 1;*/
+.wrap-menu label {
+    display: block;
+/*
+    position: absolute;
+    top: 0;
+    left: 0;
+*/
+    width: 100%;
+    border: 2px solid #fff;
+    font-family: 'Economica', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 10;
 /*    display: none;*/
 }
 
-.submenu li,
-.menu-btn {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Economica', sans-serif;
-    font-size: 22px;
-/*    font-weight: 700;*/
-    padding: 8px 16px;
-    margin-top: 25px;
-    border: 2px solid #fff;
-    border-radius: 22px;
-    transition: .3s;
-}
-
-.submenu {
-/*    transform: scaleY(0);*/
-/*    transform-origin: 0 0;*/
-/*    transition: .3s;*/
-    position: relative;
+/*
+.burger-wrap {
+    display: block;
+    position: absolute;
     top: 0;
-    left: -185px;
+    left: 0;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
     display: none;
-    transition: .4s;
+    clear: both;
+}
+*/
+
+.burger-line {
+    display: none;
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    transition: .4s all;
 }
 
-.nav li:hover .submenu {
-/*    transform: scaleY(1);  */
-    transform: translateX(185px);
-    display: block;    
+.line-2, .line-3 {
+    top: 26px;
 }
 
-.submenu li:hover {
-    transform: translateX(20px);
-    box-shadow: 0px 10px 13px -7px #000000;
+.line-4 {
+    top: 36px;
+}
+
+.b-back {
+    display: block;
+/*    content: "";*/
+    position: absolute;
+    top: 4px;
+    left: 13px;
+    width: 64px;
+    height: 45px;
+    background-color: rgba(42,85,102, 0.3);
+    border-radius: 20px;
+}
+
+nav.main-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateX(-135%);
+    transition: .4s all;
+}
+
+nav a {
+    display: block;
+    margin-top: 15px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-color: rgba(42,85,102, 0.3);
+}
+
+#check-menu:checked ~ .main-menu {
+    transform: translateX(0);
+}
+
+#check-menu:checked ~ .line-1 {
+    display: none;
+}
+
+#check-menu:checked ~ .line-2 {
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .line-3 {
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .line-4 {
+    display: none;
 }
 
 footer {
@@ -184,12 +239,23 @@ footer .social  {
         background-color: #ACC8DD;        
     }
     
-    .nav span {
-    display: none;
-}
-    .nav .fa-bars {
-    display: inline-block;
-}
+    .container {
+        justify-content: center;
+        padding-top: 20px;
+    }
+    
+    .wrap-menu {
+        margin: 0;
+        width: 70%;
+    }
+    
+    .wrap-menu label {
+        opacity: 0;
+    }
+    
+    .burger-line {
+        display: block;
+    }
     
     footer {
         padding-top: 30px;
