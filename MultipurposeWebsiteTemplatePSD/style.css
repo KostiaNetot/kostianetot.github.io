@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Univers_lt;
+    src: url(fonts/univers_lt_std_light.otf);
+}
+@font-face {
+    font-family : Segoe_ui;
+    src: url(fonts/segoe_ui.woff);
+}
+
+@font-face {
+    font-family: AlteHaasGroteskRegular;
+    src: url(fonts/AlteHaasGroteskRegular.woff);
+}
+
+@font-face {
+    font-family: Lavanderia_regular;
+    src: url(fonts/lavanderia_regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: Univers_lt;
+    font-size: 15px;
+    color: #8b8b8b;
+/*    background-color: pink;*/
+}
+
+h1 {
+    font-family: Lavanderia_regular;
+    font-size: 2.73em;
+}
+
+h2 {
+    font-size: 4.6em;
+}
+
+.container {
+    width: 100%;
+    min-width: 300px;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    height: 100vh;
+}
+
+h1 span {
+    color: #b73958;
+}
+
+.nav-section {
+    background-color: rgba(255,255,255,0.7);
+/*    position: relative;*/
+/*    z-index: 1;*/
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.nav-section .container {
+    position: relative;
+}
+
+.nav input {
+    display: none;
+}
+
+.nav label {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav .burger-line {
+    height: 2px;
+    width: 30px;
+    background-color: #454545;
+    margin: 2px 0;
+/*
+    position: absolute;
+    top: 20px;
+    right: 6vw;
+*/
+}
+
+.nav .burger-line:nth-child(2),
+.nav .burger-line:nth-child(3) {
+/*    top: 28px;*/
+}
+
+.nav .burger-line:nth-child(4) {
+/*    top: 36px;*/
+}
+
+.slide-section {
+    height: 100vh;
+    background: url('img/pink_flower.jpg') no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+.slide-section .slide-text {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4vw;
+}
+
+.circles {
+    display: flex;
+}
+
+.slide-section .circle-1 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #cb8092;
+    opacity: 0.5;
+}
+
+.slide-section h2 {
+    font-family:  AlteHaasGroteskRegular;
+    text-transform: uppercase;
+}
+
+.slide-section p {
+    font-size: 1.6em;
+    padding-bottom: 30px;
+}
