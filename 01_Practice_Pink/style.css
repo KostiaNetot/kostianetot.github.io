@@ -45,6 +45,10 @@ h2 {
     font-size: 4.6em;
 }
 
+h3 {
+    font-size: 2.33em;
+}
+
 .container {
     width: 100%;
     min-width: 300px;
@@ -77,16 +81,20 @@ h1 span {
     position: relative;
 }
 
-.nav input {
+.nav-block {
+/*    position: relative;*/
+}
+
+.nav-block input {
     display: none;
 }
 
-.nav label {
+.nav-block label {
     display: flex;
     flex-direction: column;
 }
 
-.nav .burger-line {
+.nav-block .burger-line {
     height: 2px;
     width: 30px;
     background-color: #454545;
@@ -98,18 +106,49 @@ h1 span {
 */
 }
 
-.nav .burger-line:nth-child(2),
-.nav .burger-line:nth-child(3) {
+.nav-block .burger-line:nth-child(2),
+.nav-block .burger-line:nth-child(3) {
 /*    top: 28px;*/
 }
 
-.nav .burger-line:nth-child(4) {
+.nav-block .burger-line:nth-child(4) {
 /*    top: 36px;*/
+}
+
+
+.nav-block .main-nav {
+    font-family: Segoe_ui;
+    font-size: 2em;
+    color: #333333;
+    width: 100vw;
+    height: 45vh;
+    margin-top: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.7);   
+    z-index: 10;
+    
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-block input:checked ~ .main-nav {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.main-nav a {
+    margin: 1vh -0px;
 }
 
 .slide-section {
     height: 100vh;
-    background: url('img/pink_flower.jpg') no-repeat;
+    background: url('img/pink_flower.jpg') center no-repeat;
     background-size: cover;
     color: #fff;
     text-align: center;
@@ -120,19 +159,40 @@ h1 span {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 0 4vw;
 }
 
-.circles {
-    display: flex;
+.circles-wrap {
+    width: 170px;
+    height: 160px;
+/*    display: flex;*/
+    position: relative;    
 }
 
-.slide-section .circle-1 {
-    width: 120px;
-    height: 120px;
+.slide-section .circle {
+    width: 117px;
+    height: 117px;
     border-radius: 50%;
-    background-color: #cb8092;
-    opacity: 0.5;
+    background-color: #fff;
+    opacity: .7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.slide-section .circle:nth-child(2) {
+    width: 92px;
+    height: 92px;
+    left: 70px;
+    top: 10px;    
+}
+
+.slide-section .circle:nth-child(3) {
+    width: 71px;
+    height: 71px;
+    left: 90px;
+    bottom: 20px;
 }
 
 .slide-section h2 {
@@ -143,4 +203,8 @@ h1 span {
 .slide-section p {
     font-size: 1.6em;
     padding-bottom: 30px;
+}
+
+main .features {
+    text-align: center;
 }
