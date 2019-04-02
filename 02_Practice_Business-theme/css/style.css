@@ -36,7 +36,6 @@ a {
 }
 
 a.btn {
-    width: 132px;
     padding: 15px 20px;
     font: normal 14px 'Lato-Regular';
     text-transform: uppercase;
@@ -110,7 +109,7 @@ section {
 }
 
 .col-6 {
-    width: 570px;
+    width: 560px;
 }
 
 body {
@@ -175,19 +174,20 @@ section.head-section {
     font-size: 1.23em;
 }
 
-.head-section form {
+form {
     margin-top: 30px;
     display: flex;
+    justify-content: center;
 }
 
-.head-section input {
+form input {
     padding: 15px;
     padding-left: 27px;
     margin: 5px;
     border-radius: 3px;
 }
 
-.head-section .submit {
+form .submit {
     padding: 15px 42px;
     color: #fff;
     background-color: #ffcc33;
@@ -295,6 +295,7 @@ section.about {
     margin: 26px 0;
 }
 .about-text a {
+    width: 132px;
     background-color: #ffcc66;
     border: 1px solid #E7AD48;
     border-radius: 1px;
@@ -348,6 +349,86 @@ section.price {
 
 .price-card p:nth-child(2) {
     margin: 30px 0;
+}
+
+section.process .container-fluid {
+    justify-content: center;
+}
+.process .process-item {
+    margin: 0 12px;
+} 
+.process a {
+    margin: 0 auto;
+}
+
+section.clients {
+    background-color: #ffcc66;
+}
+.clients .client-pct {
+    width: 121px;
+    height: 121px;
+}
+.clients .client-col {
+    height: 240px;
+    padding: 44px 35px 0 30px;
+    margin-top: 20px;
+    display: flex;
+    background-color: #fff;
+}
+.clients .client-text {
+    padding-left: 30px;
+}
+
+section.newsletter input {
+    border: 1px solid #ccc;
+}
+.newsletter .submit {
+    border-color: transparent;
+}
+.newsletter .container {
+    height: 560px;
+    background: url(../img/map.png) center no-repeat;
+    background-size: cover;
+    justify-content: center;
+    border-bottom: 1px solid #ccffff;
+}
+.newsletter .adress-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.newsletter .adress {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 20px;
+    color: #99cccc;
+    border-radius: 50%;
+    background-color: #394B50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+footer .main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-nav {
+    display: flex;
+    text-transform: uppercase;
+}
+.footer-nav a {
+    padding: 0 17px;
+}
+.bottom-footer {
+    padding: 16px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #6699cc;
 }
 
 @media (min-width: 576px) {
