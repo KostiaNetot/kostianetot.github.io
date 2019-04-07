@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i');
+
+$font-body: normal 15px/20px 'Archivo', sans-serif;
+
+$body-color: #848b95;
+$bg-color: #E5E5E5;
+$blue: #3065B3;
+$red: #EE5651;
+$form-bg: #F5F5F5;
+
+%h2-style {
+    color: #fff;
+    font-size: 64px/15px*1em;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+%btn-blue {
+    width: 186px;
+    padding: 8px 0;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $blue;
+    transition: .3s;
+    &:hover {
+        background-color: #153C74;
+    }
+}
+
+%btn-red {
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//    min-height: 100vh;        
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: .3s;
+    &:hover {
+        color: $blue;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+label {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: $form-bg;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
