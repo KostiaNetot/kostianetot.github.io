@@ -11,6 +11,7 @@ a
 h3
 	color: $head-color
 	font-size: 1.8rem
+	padding: 1.3rem -0px
 h4
 	font-size: 3.6rem
 	text-transform: uppercase
@@ -146,7 +147,8 @@ body
 // SECTION TOP-CATEGORIES			
 
 // ROW-2
-.categ-row-2
+.categ-row-2,
+.categ-row-3
 	.block
 		padding: 5px
 		position: relative
@@ -158,7 +160,22 @@ body
 		p
 			margin: 15px 0
 			font-weight: 500
-		
+
+// SECTION TOP-PRODUCTS				
+.top-products
+	.text-wrap
+		padding: 10px
+	button
+		width: 90%
+.top-brands
+	.brands-item
+		height: 10rem
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			display: inline-block
+			width: 70%
 		
 
 
@@ -167,6 +184,7 @@ body
 footer
 	h3
 		margin-left: 0
+		padding: 0
 .top-footer
 	background-color: $white
 	padding-top: 45px

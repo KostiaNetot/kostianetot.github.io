@@ -37,7 +37,8 @@ button {
   color: #FFFFFF;
   background-color: #3065B3;
   -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  cursor: pointer; }
   .btn-blue:hover {
     background-color: #254e8b; }
 
@@ -49,7 +50,8 @@ a {
 
 h3 {
   color: #353A42;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  padding: 1.3rem 0px; }
 
 h4 {
   font-size: 3.6rem;
@@ -192,20 +194,44 @@ body {
     .slick-dots li button:hover {
       background-color: #3065B3; }
 
-.categ-row-2 .block {
+.categ-row-2 .block,
+.categ-row-3 .block {
   padding: 5px;
   position: relative; }
-.categ-row-2 .text-wrap {
+.categ-row-2 .text-wrap,
+.categ-row-3 .text-wrap {
   position: absolute;
   top: 30px;
   left: 30px;
   color: #FFFFFF; }
-  .categ-row-2 .text-wrap p {
+  .categ-row-2 .text-wrap p,
+  .categ-row-3 .text-wrap p {
     margin: 15px 0;
     font-weight: 500; }
 
+.top-products .text-wrap {
+  padding: 10px; }
+.top-products button {
+  width: 90%; }
+
+.top-brands .brands-item {
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .top-brands .brands-item img {
+    display: inline-block;
+    width: 70%; }
+
 footer h3 {
-  margin-left: 0; }
+  margin-left: 0;
+  padding: 0; }
 
 .top-footer {
   background-color: #FFFFFF;
