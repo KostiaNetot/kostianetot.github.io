@@ -1,0 +1,26 @@
+.breadcrumbs
+  display: flex
+  li
+    padding: 0 8px
+    line-height: 5rem
+  .none
+    // display: none
+  .current
+    pointer-events: none
+
+.side-bar
+  padding: 0 15px
+  background-color: $white
+  &-categ
+    padding: 20px 0
+    border-bottom: 1px solid $body-color
+    border-color: lighten($body-color, 35%)
+  &-price
+    @extend .side-bar-categ
+    // padding: 20px 0
+    // border-bottom: 1px solid $body-color
+    // border-color: lighten($body-color, 35%)
+  &-vendors
+    padding: 20px 0
+  h3
+    margin-left: 0

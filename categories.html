@@ -7,7 +7,8 @@
 		<meta name="author" content="">
 		<link rel="icon" href="../../../../favicon.ico">
 
-		<title>VVExamVerstka</title>
+		<title>KA_Categories</title>
+		<link rel="shortcut icon" type="image/png" href="img/fav.png">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<!-- Bootstrap Grid CSS -->
 		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
@@ -28,7 +29,7 @@
 							<a href="#" class="more-inf">More info ></a>
 						</div>
 						<div class="col-md-4 phones">
-							<p"><i class="fas fa-phone"></i> +1(123)123 45 67 +1(123)123 45 89
+							<p ><i class="fas fa-phone"></i> +1(123)123 45 67 +1(123)123 45 89
 							</p>
 						</div>
 					</div>
@@ -70,7 +71,7 @@
 							    <li><a href="#">Repair Parts</a></li>
 							    <li><a href="#">Body Parts</a></li>
 							    <li><a href="#">Audio & Electronics</a></li>
-							</ul>	
+							</ul>
 						</div>
 						<div class="col-md-9 search-block">
 							<form action="#">
@@ -85,72 +86,47 @@
 			<!-- /.main-header -->
 		</header>
 		<main>
-			<div class="container">
-				<section class="top-categoires">
-					<h3>Top Categories</h3>
-					<div class="row">
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
+			<div class="container categ-content">
+				<div class="row">
+					<ul class="breadcrumbs col-md-12">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Shope</a></li>
+						<li class="current"><a href="#">Category</a></li>
+						<li class="none"><a href="#">Name of item</a></li>
+					</ul>
+				<div class="col-md-3">
+					<div class="side-bar">
+						<div class="side-bar-categ">
+							<h3>Categories</h3>
+								<ul class="check-categ">
+									<li><input type="checkbox" id="interior"><label for="interior">Inteior</label></li>
+									<li><input type="checkbox" id="exterior"><label for="exterior">Exterior</label></li>
+									<li><input type="checkbox" id="lighting"><label for="lighting">Lighting</label></li>
+									<li><input type="checkbox" id="body-parts"><label for="body-parts">Body parts</label></li>
+									<li><input type="checkbox" id="perfomance"><label for="perfomance">Perfomance</label></li>
+									<li><input type="checkbox" id="wheels-tires"><label for="wheels-tires">Wheels & Tires</label></li>
+								</ul>
 						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
+						<div class="side-bar-price">
+							<h3>Price</h3>
+							<div class="price-slice">
+								<p>$36 — $450</p>
+								<div><b>Here is gonna be Slicer</b></div>
+							</div>
 						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
-						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
-						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
-						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
-						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
-						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
-						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
-						</div>
-						<div class="categories-item fivth">
-							<a href="#">
-								<img src="img/category-items/item-1.png" alt="">
-							<p>Wheels & Tires</p>
-							</a>
+						<div class="side-bar-vendors">
+							<h3>Vendors</h3>
+							<ul class="check-vendor">
+								<li><input type="checkbox" id="cgs"><label for="cgs">CGS</label></li>
+								<li><input type="checkbox" id="dynomax"><label for="dynomax">Dynomax</label></li>
+								<li><input type="checkbox" id="gibson"><label for="gibson">Gibson</label></li>
+							</ul>
 						</div>
 					</div>
-				</section>
+					<div class="temp-block"></div>
+					<div class="temp-block"></div>
+				</div>
+				</div>
 			</div>
 		</main>
 		<footer>
@@ -170,7 +146,7 @@
 				                    	<p>We know our products</p>
 						</div>
 						<div class="col-md-3 features-item">
-							<h3>Easy Returns</h3>  
+							<h3>Easy Returns</h3>
 				                    	<p>Quick & hassle free</p>
 						</div>
 					</div>
@@ -230,7 +206,7 @@
 							    Lergos — Multipurpose WP Theme with Elementor Page Builder. © 2019 Design by Zemez Inc.
 							</p>
 						</div>
-						<div class="col-md-5 partners">		
+						<div class="col-md-5 partners">
 							<img src="img/partners.png" alt="partners">
 					</div>
 				</div>
@@ -238,7 +214,7 @@
 			<!-- /.sub-footer -->
 		</footer>
 
-		
+
 
 
 		<!-- Bootstrap core JavaScript ================================================== -->
