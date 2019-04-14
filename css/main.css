@@ -67,7 +67,7 @@ h4 {
   text-align: center;
   background-color: #FFFFFF;
   margin: 5px;
-  width: calc(20% - 10px); }
+  width: calc(100% - 10px); }
 
 html {
   font-size: 10px; }
@@ -78,11 +78,11 @@ body {
   background-color: #E5E5E5; }
 
 .top-header {
+  text-align: center;
   color: #353A42;
   padding: 8px 0;
   font-weight: 700; }
   .top-header .offer span {
-    font-weight: 400;
     color: #848B95; }
   .top-header .more-inf {
     color: #EE5651; }
@@ -90,12 +90,15 @@ body {
       color: #3065B3; }
   .top-header .phones {
     font-size: 1.8rem;
-    text-align: right; }
+    text-align: center; }
 
 .main-header {
+  text-align: center;
   background-color: #FFFFFF;
+  padding-top: 20px;
   padding-bottom: 20px; }
   .main-header img {
+    display: inline-block;
     width: auto; }
   .main-header .row {
     -webkit-box-align: center;
@@ -114,13 +117,25 @@ body {
     .main-header .user-block a {
       display: inline-block; }
   .main-header .site-nav {
-    color: #353A42; }
-  .main-header .user-block .user-cart {
-    color: #3065B3; }
-    .main-header .user-block .user-cart:hover {
-      color: #EE5651; }
+    color: #353A42;
+    display: none; }
+  .main-header .user-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .main-header .user-block li {
+      padding: 8px 8px; }
+    .main-header .user-block .user-cart {
+      color: #3065B3; }
+      .main-header .user-block .user-cart:hover {
+        color: #EE5651; }
   .main-header .categories {
-    position: relative; }
+    position: relative;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 10px; }
     .main-header .categories input {
       display: none; }
     .main-header .categories .cat-btn {
@@ -366,3 +381,13 @@ footer h3 {
       width: auto; }
   .sub-footer .partners {
     text-align: right; }
+
+@media (max-width: 767px) {
+  main .container {
+    width: 100%; } }
+@media (min-width: 768px) {
+  .fivth {
+    width: calc(50% - 10px); } }
+@media (min-width: 960px) {
+  .fivth {
+    width: calc(20% - 10px); } }

@@ -24,7 +24,7 @@ h4
 	text-align: center
 	background-color: $white
 	margin: 5px
-	width: calc(20% - 10px)
+	width: calc(100% - 10px)
 
 html
 	font-size: 10px
@@ -36,12 +36,12 @@ body
 
 // HEADER
 .top-header
+	text-align: center
 	color: $head-color
 	padding: 8px 0
 	font-weight: 700
 	.offer
 		span
-			font-weight: 400
 			color: $body-color
 	.more-inf
 		color: $red
@@ -49,12 +49,15 @@ body
 			color: $blue
 	.phones
 		font-size: 1.8rem
-		text-align: right
+		text-align: center
 
 .main-header
+	text-align: center
 	background-color: $white
+	padding-top: 20px
 	padding-bottom: 20px
 	img
+		display: inline-block
 		width: auto
 	.row
 		align-items: center
@@ -68,14 +71,19 @@ body
 			display: inline-block
 	.site-nav
 		color: $head-color
+		display: none
 	.user-block
-		// text-align: right
+		flex-direction: column
+		li
+			padding: 8px 8px
 		.user-cart
 			color: $blue
 			&:hover
 				color: $red
 	.categories
 		position: relative
+		order: 1
+		margin-top: 10px
 		input
 			display: none
 		.cat-btn
@@ -286,3 +294,7 @@ footer
 			width: auto
 	.partners
 		text-align: right
+
+// ADAPTIVE
+@import 'media'
+@media (min-width: 960px)
