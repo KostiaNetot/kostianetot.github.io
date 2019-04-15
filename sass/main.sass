@@ -14,6 +14,7 @@ h3
 	padding: 1.3rem -0px
 h4
 	font-size: 3.6rem
+	line-height: 1
 	text-transform: uppercase
 	font-weight: 700
 	transition: .3s
@@ -63,17 +64,36 @@ body
 		align-items: center
 	.site-nav,
 	.user-block
-		display: flex
+		// display: flex
+		// flex-direction: column
 		li
-			display: inline-block
 			padding: 20px 8px
 		a
 			display: inline-block
-	.site-nav
-		color: $head-color
-		display: none
+	.site-nav-wrap
+		position: fixed
+		top: 10px
+		right: 10px
+		display: flex
+		align-items: baseline
+		.mob-menu-btn
+			padding: 10px 12px
+			color: $white
+			background-color: $blue
+			border-radius: 5px
+			cursor: pointer
+			&:hover
+				background-color: lighten($blue, 10%)
+		.site-nav
+			width: 80vw
+			height: 100vh
+			margin-left: 10px
+			text-align: left
+			color: $head-color
+			background-color: $white
+			z-index: 999
+			display: none
 	.user-block
-		flex-direction: column
 		li
 			padding: 8px 8px
 		.user-cart
@@ -82,8 +102,6 @@ body
 				color: $red
 	.categories
 		position: relative
-		order: 1
-		margin-top: 10px
 		input
 			display: none
 		.cat-btn
@@ -175,12 +193,17 @@ body
 		transform: translateY(-100%)
 		&:hover
 			color: inherit
-// ROW-2
+// ROW-2,3
 .categ-row-2,
 .categ-row-3
 	.block
+		height: 245px
 		padding: 5px
 		position: relative
+		overflow: hidden
+		img
+			min-height: 100%
+			object-fit: cover
 		.text-wrap
 			position: absolute
 			top: 30px
@@ -223,7 +246,8 @@ body
 	.row
 		margin-bottom: 30px
 	.brands-item
-		height: 10rem
+		// height: 10rem
+		padding: 30px 10px
 		display: flex
 		align-items: center
 		justify-content: center
@@ -232,7 +256,8 @@ body
 			background-color: darken($white, 5%)
 		img
 			display: inline-block
-			width: 70%
+			width: auto
+			// width: 70%
 
 // CATEGORIES
 @import 'categories'
@@ -248,8 +273,10 @@ footer
 	padding-bottom: 30px
 	border-bottom: 1px solid $body-bg
 	.features-item
-		padding-left: 60px
+		padding-top: 60px
+		padding-bottom: 30px
 		position: relative
+		text-align: center
 		&::before
 			position: absolute
 			width: 50px
@@ -258,7 +285,8 @@ footer
 			content: ''
 			background: url('../img/dollar.svg') center 0 no-repeat
 			top: 0
-			left: 0
+			left: 50%
+			transform: translateX(-50%)
 		&:nth-child(2)::before
 			background: url('../img/like.svg') center 0 no-repeat
 		&:nth-child(3)::before
@@ -284,6 +312,19 @@ footer
 		position: absolute
 		right: 10px
 		top: 10px
+	.social
+		.fab
+			font-size: 2rem
+			padding: 25px 15px
+		a
+			display: inline-block
+			transition: .2s
+	.contacts
+		a
+			display: inline-block
+		.fas
+			font-size: 2rem
+			padding-right: 10px
 
 .sub-footer
 	padding: 10px 0
@@ -292,9 +333,11 @@ footer
 		img
 			display: inline-block
 			width: auto
-	.partners
-		text-align: right
+	.partners,
+	.copyright
+		text-align: center
+	.copyright
+		margin-bottom: 15px
 
 // ADAPTIVE
 @import 'media'
-@media (min-width: 960px)

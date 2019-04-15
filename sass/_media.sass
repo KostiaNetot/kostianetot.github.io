@@ -1,10 +1,26 @@
 @media (max-width: 767px)
-  main
-    .container
-      width: 100%
+  .brands-item
+    width: calc(50% - 10px)
+  .categories
+    order: 1
+    margin-top: 10px
+
 @media (min-width: 768px)
   .fivth
     width: calc(50% - 10px)
+  .products-item
+    width: calc(33.333333% - 10px)
+  .user-block
+    display: flex
+    flex-direction: row
+
+  .categories
+    // order: 2
+
+@media (max-width: 959px)
+  .container
+    width: 100%
+    max-width: 100%
 
 @media (min-width: 960px)
   .fivth
@@ -15,3 +31,14 @@
 // 	background-color: $white
 // 	margin: 5px
 // 	width: calc(20% - 10px)
+// .site-nav,
+// .user-block
+//   display: flex
+//   li
+//     display: inline-block
+//     padding: 20px 8px
+//   a
+//     display: inline-block
+// .site-nav
+//   color: $head-color
+//   display: none
