@@ -1,5 +1,6 @@
 @media (max-width: 767px)
   .brands-item
+    width: 50%
     width: calc(50% - 10px)
   .categories
     order: 1
@@ -7,24 +8,37 @@
 
 @media (min-width: 768px)
   .fivth
+    width: 50%
     width: calc(50% - 10px)
-  .products-item
+  .top-products .fivth
+    width: 33.333333%
     width: calc(33.333333% - 10px)
+  .top-header
+    text-align: left
+    .phones
+      text-align: right
+  .main-header
+    .row:nth-child(1)
+      padding-bottom: 20px
+    .mob-menu-btn
+      display: none
+    .site-nav
+      display: flex !important
   .user-block
     display: flex
     flex-direction: row
-
   .categories
     // order: 2
 
-@media (max-width: 959px)
+@media (min-width: 960px)
+  .fivth
+    width: 20%
+    width: calc(20% - 10px)
+
+@media (max-width: 990px)
   .container
     width: 100%
     max-width: 100%
-
-@media (min-width: 960px)
-  .fivth
-    width: calc(20% - 10px)
 
 // .fivth
 // 	text-align: center

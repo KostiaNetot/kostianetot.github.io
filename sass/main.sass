@@ -25,6 +25,7 @@ h4
 	text-align: center
 	background-color: $white
 	margin: 5px
+	width: 100%
 	width: calc(100% - 10px)
 
 html
@@ -60,6 +61,7 @@ body
 	img
 		display: inline-block
 		width: auto
+		max-width: 100%
 	.row
 		align-items: center
 	.site-nav,
@@ -67,31 +69,34 @@ body
 		// display: flex
 		// flex-direction: column
 		li
-			padding: 20px 8px
+			padding: 8px 8px
 		a
 			display: inline-block
 	.site-nav-wrap
-		position: fixed
-		top: 2vh
-		right: 2vw
-		display: flex
-		align-items: baseline
+		// position: fixed
+		// top: 2vh
+		// right: 2vw
+		// display: flex
+		// align-items: baseline
 		.mob-menu-btn
+			position: fixed
+			top: 2vh
+			right: 2vw
 			padding: 10px 12px
 			color: $white
 			background-color: $blue
 			border-radius: 5px
 			cursor: pointer
+			z-index: 999
 			&:hover
 				background-color: lighten($blue, 10%)
 		.site-nav
-			width: 80vw
-			height: 100vh
-			margin-left: 10px
-			text-align: left
+			// width: 80vw
+			// height: 100vh
+			// margin-left: 10px
+			display: flex
 			color: $head-color
 			background-color: $white
-			z-index: 999
 			display: none
 	.user-block
 		li
@@ -113,6 +118,7 @@ body
 	.category-menu
 		width: 95%
 		max-width: 100%
+		text-align: left
 		text-transform: uppercase
 		background-color: $white
 		position: absolute

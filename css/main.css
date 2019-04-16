@@ -68,6 +68,7 @@ h4 {
   text-align: center;
   background-color: #FFFFFF;
   margin: 5px;
+  width: 100%;
   width: calc(100% - 10px); }
 
 html {
@@ -100,44 +101,37 @@ body {
   padding-bottom: 20px; }
   .main-header img {
     display: inline-block;
-    width: auto; }
+    width: auto;
+    max-width: 100%; }
   .main-header .row {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
   .main-header .site-nav li,
   .main-header .user-block li {
-    padding: 20px 8px; }
+    padding: 8px 8px; }
   .main-header .site-nav a,
   .main-header .user-block a {
     display: inline-block; }
-  .main-header .site-nav-wrap {
+  .main-header .site-nav-wrap .mob-menu-btn {
     position: fixed;
     top: 2vh;
     right: 2vw;
+    padding: 10px 12px;
+    color: #FFFFFF;
+    background-color: #3065B3;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999; }
+    .main-header .site-nav-wrap .mob-menu-btn:hover {
+      background-color: #487ece; }
+  .main-header .site-nav-wrap .site-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline; }
-    .main-header .site-nav-wrap .mob-menu-btn {
-      padding: 10px 12px;
-      color: #FFFFFF;
-      background-color: #3065B3;
-      border-radius: 5px;
-      cursor: pointer; }
-      .main-header .site-nav-wrap .mob-menu-btn:hover {
-        background-color: #487ece; }
-    .main-header .site-nav-wrap .site-nav {
-      width: 80vw;
-      height: 100vh;
-      margin-left: 10px;
-      text-align: left;
-      color: #353A42;
-      background-color: #FFFFFF;
-      z-index: 999;
-      display: none; }
+    color: #353A42;
+    background-color: #FFFFFF;
+    display: none; }
   .main-header .user-block li {
     padding: 8px 8px; }
   .main-header .user-block .user-cart {
@@ -157,6 +151,7 @@ body {
   .main-header .category-menu {
     width: 95%;
     max-width: 100%;
+    text-align: left;
     text-transform: uppercase;
     background-color: #FFFFFF;
     position: absolute;
@@ -331,15 +326,115 @@ body {
 
 .side-bar {
   padding: 0 15px;
+  margin-bottom: 28px;
   background-color: #FFFFFF; }
+  .side-bar input[type="checkbox"] {
+    display: none; }
+  .side-bar label {
+    line-height: 32px;
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer; }
+  .side-bar label::before {
+    width: 22px;
+    height: 22px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    background-color: #F5F5F5;
+    border: 1px solid #E5E5E5; }
+  .side-bar label::after {
+    width: 7px;
+    height: 12px;
+    content: "";
+    display: block;
+    border-right: 3px solid #F5F5F5;
+    border-bottom: 3px solid #F5F5F5;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .side-bar input[type="checkbox"]:checked ~ label::before {
+    background-color: #3065B3;
+    border-color: #3065B3; }
+  .side-bar input[type="checkbox"]:checked ~ label::after {
+    border-color: #FFFFFF; }
   .side-bar-categ, .side-bar-price {
     padding: 20px 0;
     border-bottom: 1px solid #848B95;
     border-color: #e4e5e8; }
+  .side-bar-price p {
+    line-height: 32px; }
+  .side-bar-price .price-slice {
+    height: 6px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #EE5651;
+    position: relative; }
+    .side-bar-price .price-slice .left-sqr {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-color: #3065B3;
+      position: absolute;
+      top: -6px;
+      left: 0;
+      cursor: pointer; }
+    .side-bar-price .price-slice .right-sqr {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-color: #3065B3;
+      position: absolute;
+      top: -6px;
+      right: 0;
+      cursor: pointer; }
   .side-bar-vendors {
     padding: 20px 0; }
   .side-bar h3 {
     margin-left: 0; }
+
+.temp-block {
+  height: 245px;
+  padding: 5px;
+  position: relative;
+  overflow: hidden; }
+  .temp-block img {
+    min-height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .temp-block .text-wrap {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: #FFFFFF; }
+  .temp-block h4 {
+    font-size: 2.5rem; }
+  .temp-block p {
+    margin: 15px 0;
+    font-weight: 500; }
+
+.categ-main-content h3 {
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  margin-left: 0; }
+.categ-main-content p {
+  margin-bottom: 20px; }
+.categ-main-content .products-item-wrap {
+  padding: 10px; }
+.categ-main-content .products-item {
+  background-color: #FFFFFF; }
+  .categ-main-content .products-item:hover {
+    background-color: #f2f2f2; }
+  .categ-main-content .products-item button {
+    width: 100%; }
+    .categ-main-content .products-item button .fa-shopping-cart::before {
+      position: relative;
+      bottom: 2px;
+      left: -6px; }
 
 footer h3 {
   margin-left: 0;
@@ -421,6 +516,7 @@ footer h3 {
 
 @media (max-width: 767px) {
   .brands-item {
+    width: 50%;
     width: calc(50% - 10px); }
 
   .categories {
@@ -430,10 +526,26 @@ footer h3 {
     margin-top: 10px; } }
 @media (min-width: 768px) {
   .fivth {
+    width: 50%;
     width: calc(50% - 10px); }
 
-  .products-item {
+  .top-products .fivth {
+    width: 33.333333%;
     width: calc(33.333333% - 10px); }
+
+  .top-header {
+    text-align: left; }
+    .top-header .phones {
+      text-align: right; }
+
+  .main-header .row:nth-child(1) {
+    padding-bottom: 20px; }
+  .main-header .mob-menu-btn {
+    display: none; }
+  .main-header .site-nav {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important; }
 
   .user-block {
     display: -webkit-box;
@@ -443,10 +555,11 @@ footer h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; } }
-@media (max-width: 959px) {
+@media (min-width: 960px) {
+  .fivth {
+    width: 20%;
+    width: calc(20% - 10px); } }
+@media (max-width: 990px) {
   .container {
     width: 100%;
     max-width: 100%; } }
-@media (min-width: 960px) {
-  .fivth {
-    width: calc(20% - 10px); } }
