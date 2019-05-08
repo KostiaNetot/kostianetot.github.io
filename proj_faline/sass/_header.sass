@@ -1,0 +1,41 @@
+header
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid $bd-cl
+  .logo-wrap
+    color: $log-cl
+    text-align: left
+    h1
+      @extend %h1
+    p
+      font-size: 36px
+      font-weight: 800
+
+.site-nav
+  font-family: $h2-ff
+  font-size: $menu-fsz
+  display: flex
+  align-items: center
+  ul
+    display: flex
+    justify-content: space-between
+  a
+    padding: 5px 10px
+    position: relative
+
+    // &::after
+    //   position: absolute
+    //   content: ""
+    //   left: 0
+    //   bottom: 0
+    //   width: 100%
+    //   height: 2px
+    //   background-color: $white
+    //   // transform: scale3d(0, 1, 1)
+    //   transition: all 0.2s
+    // &:hover + a::after
+    //   background-color: red
+
+.main-pg-header
+  border-bottom-color: $white
+  color: $white
