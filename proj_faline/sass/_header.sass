@@ -1,0 +1,75 @@
+header
+  display: flex
+  justify-content: center
+  border-bottom: 1px solid $bd-cl
+  position: relative
+  .logo-wrap
+    color: $log-cl
+    text-align: center
+    h1
+      @extend %h1
+    p
+      font-size: 30px
+      font-weight: 800
+
+.site-nav
+  font-family: $h2-ff
+  font-size: $menu-fsz
+  // display: flex
+  // align-items: center
+  #checkbox-menu
+    display: none
+  label
+    display: block
+    cursor: pointer
+    width: 42px
+    height: 42px
+    background-color: rgba(0,0,0,0.2)
+    border-radius: 50%
+    position: absolute
+    bottom: -48px
+    right: 20px
+    transition: .4s
+  .burger-line
+    position: absolute
+    width: 24px
+    height: 2px
+    background-color: $white
+    bottom: -29px
+    transform: translateX(-8px)
+    right: 21px
+    transition: .4s 
+  .burger-line:nth-child(4)
+    bottom: -23px
+  .burger-line:nth-child(5)
+    bottom: -35px
+  #checkbox-menu:checked ~ .burger-line:nth-child(5)
+    transform: rotate(45deg) translateX(-8px) 
+  #checkbox-menu:checked ~ .burger-line:nth-child(4)
+    transform: rotate(-45deg) translateX(-8px)
+  #checkbox-menu:checked ~ .burger-line:nth-child(3)
+    transform: translateX(-100%) scale(0)  
+  #checkbox-menu:checked ~ label
+    transform: translateX(2px)
+
+  .main-pg-nav
+    position: absolute
+    left: 0
+    bottom: -269px
+    width: 80vw
+    background-color: rgba(0,0,0,0.3)
+    transform: translateX(-100%)
+    opacity: 0
+    transition: .5s
+  a
+    padding: 10px 10px
+    cursor: pointer
+    // position: relative
+  #checkbox-menu:checked ~ .main-pg-nav
+    transform: translateX(0)    
+    opacity: 1
+
+
+.main-pg-header
+  border-bottom-color: $white
+  color: $white
