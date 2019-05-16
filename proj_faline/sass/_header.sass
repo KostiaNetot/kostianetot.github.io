@@ -1,14 +1,15 @@
 header
   display: flex
-  justify-content: space-between
+  justify-content: center
   border-bottom: 1px solid $bd-cl
+  position: relative
   .logo-wrap
     color: $log-cl
-    text-align: left
+    text-align: center
     h1
       @extend %h1
     p
-      font-size: 36px
+      font-size: 30px
       font-weight: 800
 
 .site-nav
@@ -16,25 +17,33 @@ header
   font-size: $menu-fsz
   display: flex
   align-items: center
+  #checkbox-menu
+    display: none
+  label
+    cursor: pointer
+  .burger-line
+    position: absolute
+    width: 30px
+    height: 2px
+    background-color: $white
+    bottom: -12px
+    // transform: traslateY(50%)
+    right: 4%
+  .burger-line:nth-child(2)
+    bottom: -20px
+  .burger-line:nth-child(3)
+    bottom: -28px
+  #checkbox-menu:checked ~ .burger-line:nth-child(2) 
+    background-color: red
   ul
     display: flex
     justify-content: space-between
+    display: none
   a
     padding: 5px 10px
     position: relative
 
-    // &::after
-    //   position: absolute
-    //   content: ""
-    //   left: 0
-    //   bottom: 0
-    //   width: 100%
-    //   height: 2px
-    //   background-color: $white
-    //   // transform: scale3d(0, 1, 1)
-    //   transition: all 0.2s
-    // &:hover + a::after
-    //   background-color: red
+
 
 .main-pg-header
   border-bottom-color: $white

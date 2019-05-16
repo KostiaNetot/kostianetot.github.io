@@ -25,12 +25,12 @@ a {
 
 header .logo-wrap h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 800;
 }
 
 footer button {
-  font-size: 18px;
+  font-size: 24px;
   color: #ffffff;
   padding: 10px 20px;
   background-color: #f57f0c;
@@ -66,17 +66,18 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid #3c3b3b;
+  position: relative;
 }
 header .logo-wrap {
   color: #f57f0c;
-  text-align: left;
+  text-align: center;
 }
 header .logo-wrap p {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 800;
 }
 
@@ -90,6 +91,29 @@ header .logo-wrap p {
       -ms-flex-align: center;
           align-items: center;
 }
+.site-nav #checkbox-menu {
+  display: none;
+}
+.site-nav label {
+  cursor: pointer;
+}
+.site-nav .burger-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  bottom: -12px;
+  right: 4%;
+}
+.site-nav .burger-line:nth-child(2) {
+  bottom: -20px;
+}
+.site-nav .burger-line:nth-child(3) {
+  bottom: -28px;
+}
+.site-nav #checkbox-menu:checked ~ .burger-line:nth-child(2) {
+  background-color: red;
+}
 .site-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,6 +121,7 @@ header .logo-wrap p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: none;
 }
 .site-nav a {
   padding: 5px 10px;
@@ -112,20 +137,32 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 20px;
+  height: 30vh;
 }
 footer .social {
+  width: 256px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #f57f0c;
 }
 footer .social li {
   padding: 5px 10px;
-  font-size: 1.5em;
+  font-size: 3em;
 }
 
 @media (min-width: 576px) {
