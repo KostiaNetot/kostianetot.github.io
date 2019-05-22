@@ -18,9 +18,19 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
+}
+
+.row {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 header .logo-wrap h1 {
@@ -29,19 +39,24 @@ header .logo-wrap h1 {
   font-weight: 800;
 }
 
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+}
+
 footer button {
   font-size: 24px;
   color: #ffffff;
   padding: 10px 20px;
   background-color: #f57f0c;
   border: none;
-  border-radius: 5px;
+  border-radius: 24px;
   cursor: pointer;
 }
 
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #3c3b3b;
   background: #f6f5f4;
   height: 100vh;
@@ -50,14 +65,29 @@ body {
 .main-wrapper {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head-wrap p {
+  padding: 30px 0;
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid #3c3b3b;
   position: relative;
 }
@@ -85,8 +115,9 @@ header .logo-wrap p {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   position: absolute;
-  bottom: -48px;
+  bottom: -55px;
   right: 20px;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .site-nav .burger-line {
@@ -94,28 +125,34 @@ header .logo-wrap p {
   width: 24px;
   height: 2px;
   background-color: #ffffff;
-  bottom: -29px;
-  transform: translateX(-8px);
+  bottom: -36px;
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
   right: 21px;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .site-nav .burger-line:nth-child(4) {
-  bottom: -23px;
+  bottom: -30px;
 }
 .site-nav .burger-line:nth-child(5) {
-  bottom: -35px;
+  bottom: -42px;
 }
 .site-nav #checkbox-menu:checked ~ .burger-line:nth-child(5) {
-  transform: rotate(45deg) translateX(-8px);
+  -webkit-transform: rotate(45deg) translateX(-8px);
+          transform: rotate(45deg) translateX(-8px);
 }
 .site-nav #checkbox-menu:checked ~ .burger-line:nth-child(4) {
-  transform: rotate(-45deg) translateX(-8px);
+  -webkit-transform: rotate(-45deg) translateX(-8px);
+          transform: rotate(-45deg) translateX(-8px);
 }
 .site-nav #checkbox-menu:checked ~ .burger-line:nth-child(3) {
-  transform: translateX(-100%) scale(0);
+  -webkit-transform: translateX(-100%) scale(0);
+          transform: translateX(-100%) scale(0);
 }
 .site-nav #checkbox-menu:checked ~ label {
-  transform: translateX(2px);
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
 }
 .site-nav .main-pg-nav {
   position: absolute;
@@ -123,8 +160,10 @@ header .logo-wrap p {
   bottom: -269px;
   width: 80vw;
   background-color: rgba(0, 0, 0, 0.3);
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   opacity: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .site-nav a {
@@ -132,7 +171,8 @@ header .logo-wrap p {
   cursor: pointer;
 }
 .site-nav #checkbox-menu:checked ~ .main-pg-nav {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   opacity: 1;
 }
 
@@ -141,22 +181,60 @@ header .logo-wrap p {
   color: #ffffff;
 }
 
+.head-wrap {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.services-item {
+  margin-bottom: 30px;
+}
+.services-item .img-wrap {
+  height: 165px;
+  overflow: hidden;
+}
+.services-item .text-wrap {
+  padding: 15px 25px;
+  background-color: #fff;
+}
+.services-item .text-wrap p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.services-item .text-wrap a {
+  text-align: right;
+  cursor: pointer;
+}
+
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-  height: 30vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+  height: 18vh;
 }
 footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #f57f0c;
 }
 footer .social li {
-  padding: 5px 20px;
-  font-size: 3em;
+  padding: 5px 10px;
+  font-size: 2.5em;
 }
 
 @media (min-width: 576px) {
@@ -173,10 +251,62 @@ footer .social li {
   .container {
     max-width: 960px;
   }
+
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .logo-wrap h1 {
+    font-size: 52px;
+  }
+  header .logo-wrap p {
+    font-size: 32px;
+  }
+
+  .site-nav label {
+    display: none;
+  }
+  .site-nav span {
+    display: none;
+  }
+  .site-nav .main-pg-nav {
+    position: relative;
+    bottom: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: auto;
+    opacity: 1;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer button {
+    font-size: 18px;
+    border-radius: 20px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+
+  header .logo-wrap h1 {
+    font-size: 64px;
+  }
+  header .logo-wrap p {
+    font-size: 36px;
   }
 }
 
