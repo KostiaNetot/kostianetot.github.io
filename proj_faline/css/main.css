@@ -6,6 +6,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul {
@@ -246,6 +248,13 @@ footer .social li {
   .container {
     max-width: 720px;
   }
+
+  header .logo-wrap h1 {
+    font-size: 52px;
+  }
+  header .logo-wrap p {
+    font-size: 32px;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -259,12 +268,6 @@ footer .social li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  header .logo-wrap h1 {
-    font-size: 52px;
-  }
-  header .logo-wrap p {
-    font-size: 32px;
   }
 
   .site-nav label {
@@ -284,6 +287,15 @@ footer .social li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .site-nav .main-pg-nav a {
+    border-top: 2px solid transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .site-nav .main-pg-nav a:hover {
+    border-top: 2px solid #ffffff;
+    color: #f57f0c;
   }
 
   footer {
