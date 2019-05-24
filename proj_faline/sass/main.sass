@@ -41,18 +41,24 @@ h3
   z-index: 10
   .modal-content
     background-color: #FFFAFA
-    height: 90vh
     width: 90vw
+    max-width: 450px
+    min-height: 550px
     margin: 5vh auto
     border-radius: 20px
     display: flex
+    flex-wrap: wrap
     position: relative
   form
     padding: 20px
     width: 100%
     display: flex
+    flex-wrap: wrap
     flex-direction: column
     justify-content: space-between
+    .form-inner-wrap
+      display: flex
+      flex-direction: column
     h3
       text-align: center
       font-family: Open Sans
@@ -63,7 +69,7 @@ h3
         top: -5px
         right: 10px
     p
-      margin-bottom: 10px
+      margin-bottom: 2x
       font-size: 16px
       font-weight: bold
     input, textarea
@@ -75,7 +81,8 @@ h3
       border: 1px solid transparent
       border-radius: 10px
       font-size: 18px
-    input:focus, textarea:focus
+      cursor: pointer
+    input:focus, textarea:focus, select:focus
       background-color: $white
       border: 1px solid #EAE5E5
       border-radius: 10px
@@ -86,8 +93,21 @@ h3
     input[type=submit]
       @extend %less-btn
       display: block
-      margin: 0 auto
+      // margin: 0 auto
       font-size: 18px
+      // margin-top: 40px
+    .form-item-wrap
+      margin-bottom: 10px
+    select
+      width: 100%
+      height: 32px
+      outline: none
+      border: 1px solid transparent
+      border-radius: 10px
+      font-size: 18px
+      cursor: pointer
+      border-radius: 10px
+      background-color: $input-bg
 
 @import "services"
 
