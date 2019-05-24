@@ -27,15 +27,69 @@ body
 h2
   @extend %h2
 
+h3
+  @extend %h3
+
+.modal
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background-color: rgba(0,0,0,0.5)
+  z-index: 10
+  .modal-content
+    background-color: #FFFAFA
+    height: 90vh
+    width: 90vw
+    margin: 5vh auto
+    border-radius: 20px
+    display: flex
+    position: relative
+  form
+    padding: 20px
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    h3
+      text-align: center
+      font-family: Open Sans
+      span
+        display: inline-block
+        font-size: 2em
+        position: absolute
+        top: -5px
+        right: 10px
+    p
+      margin-bottom: 10px
+      font-size: 16px
+      font-weight: bold
+    input, textarea
+      display: block
+      width: 100%
+      background-color: #EAE5E5
+      padding: 5px 7px
+      outline: none
+      border: 1px solid transparent
+      border-radius: 10px
+      font-size: 18px
+    input:focus, textarea:focus
+      background-color: $white
+      border: 1px solid #EAE5E5
+      border-radius: 10px
+    textarea
+      height: 130px
+      resize: none
+      border: 1px solid transparent
+    input[type=submit]
+      @extend %less-btn
+      display: block
+      margin: 0 auto
+      font-size: 18px
+
 @import "services"
-
-
-
-
-
-
-
-
 
 @import "footer"
 
