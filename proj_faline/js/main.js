@@ -23,3 +23,8 @@ textAr.addEventListener('focus', transUp);
 function transUp() {
 	modalContent.style.transform = 'translateY(-50%)';
 }
+window.onclick = function (event) {
+	if (event.target == modal) {
+		modalContent.style.transform = 'translateY(0)';	
+	}
+}
