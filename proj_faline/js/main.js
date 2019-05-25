@@ -1,3 +1,4 @@
+/*-----Appearence of Modal Window-----*/
 var modal = document.querySelector('#modal');
 var lessonBtn = document.querySelector('#lesson-btn');
 var close = document.querySelector('#close');
@@ -14,4 +15,11 @@ window.onclick = function (event) {
 	}
 }
 
-console.log(close);
+/*------TextArea Translate-------*/
+var modalContent = document.querySelector('.modal-content');
+var textAr = document.querySelector('#textarea');
+textAr.addEventListener('focus', transUp);
+
+function transUp() {
+	modalContent.style.transform = 'translateY(-50%)';
+}

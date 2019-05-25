@@ -33,6 +33,9 @@ img {
 .row {
   padding-left: 15px;
   padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 header .logo-wrap h1 {
@@ -200,6 +203,10 @@ header .logo-wrap p {
 .head-wrap {
   margin-top: 60px;
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .modal {
@@ -224,6 +231,8 @@ header .logo-wrap p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal form {
   padding: 20px;
@@ -316,16 +325,67 @@ header .logo-wrap p {
   background-color: #EAE5E5;
 }
 
+.services-content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services-content .left-content, .services-content .right-content {
+  width: 300px;
+  margin-right: 25px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.services-content .right-content {
+  margin-right: 0;
+  margin-left: 25px;
+}
+
 .services-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
 }
 .services-item .img-wrap {
-  height: 165px;
+  width: 100%;
+  height: 175px;
   overflow: hidden;
+  border-radius: 10px;
+}
+.services-item .img-wrap img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.services-item .img-wrap:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .services-item .text-wrap {
   padding: 15px 25px;
   background-color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 0 0 10px 10px;
 }
 .services-item .text-wrap p {
   padding-top: 15px;
@@ -375,6 +435,17 @@ footer .social li:hover {
           transform: scale(1.1);
 }
 
+@media (max-width: 575px) {
+  .services-content {
+    width: 100%;
+  }
+  .services-content .left-content {
+    margin-right: 0;
+  }
+  .services-content .right-content {
+    margin-left: 0;
+  }
+}
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -445,6 +516,11 @@ footer .social li:hover {
     border-radius: 20px;
   }
 }
+/*----- SERVICES PAGE ------*/
+ * .services-content
+ *   // justify-content: space-between
+ *   .left-content, .right-content
+ *     // width: 320px */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
