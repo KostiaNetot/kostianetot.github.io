@@ -478,7 +478,7 @@ footer .social li:hover, .footer-container .social li:hover {
 }
 
 .under-footer {
-  font-size: 0.7em;
+  font-size: 0.8em;
   background-color: #c4c4c4;
   color: #3c3b3b;
   padding: 10px 0;
@@ -537,10 +537,6 @@ footer .social li:hover, .footer-container .social li:hover {
   .footer-container {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-
-  .under-footer {
-    font-size: 1em;
   }
 }
 @media (min-width: 992px) {
