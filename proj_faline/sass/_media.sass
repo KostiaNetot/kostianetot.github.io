@@ -1,12 +1,4 @@
-@media (max-width: 575px)
-  .services-content
-    .left-content, .right-content
-    width: 100%
-    .left-content
-      margin-right: 0
-    .right-content
-      margin-left: 0  
-
+// @media (max-width: 575px)
 
 @media (min-width: 576px)
   .container
@@ -15,17 +7,34 @@
 @media (min-width: 768px)
   .container
     max-width: 720px
-  header
-    .logo-wrap
-      h1
-        font-size: 52px
-      p
-        font-size: 32px
+  .reg-header
+    h1
+      font-size: 36px
+    p
+      font-size: 24px
+  .main-pg-header
+    .main-h
+      font-size: 52px
+    p
+      font-size: 32px
+  .services-content
+    flex-direction: row
+    justify-content: space-between
+    .left-content
+      width: 300px
+      margin-right: 25px
+    .right-content
+      width: 300px
+      margin-left: 25px
+  .footer-container
+    justify-content: space-around
+  .under-footer
+    font-size: 1em
 
 @media (min-width: 992px)
   .container
     max-width: 960px
-  header
+  header, .head-container
     justify-content: space-between
     align-items: center
   .site-nav
@@ -41,18 +50,28 @@
       opacity: 1
       background-color: transparent
       display: flex
+      align-items: center
+      justify-content: space-between
       a
         border-top: 2px solid transparent
         transition: all .3s
         &:hover
           border-top: 2px solid $white
-          color: $log-cl
+          color: $white
+  .main-pg-header .main-pg-nav a:hover
+    color: $log-cl
+  .reg-header
+    ul a
+      color: $bd-cl
+
         
-  footer
+  footer, .footer-container
     flex-direction: row
     button
       font-size: 18px
       border-radius: 20px
+  .reg-footer
+    // height: auto
 
 /*----- SERVICES PAGE ------*/
   .services-content

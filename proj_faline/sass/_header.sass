@@ -1,7 +1,7 @@
 header
   display: flex
   justify-content: center
-  border-bottom: 1px solid $bd-cl
+  border-bottom: 1px solid $white
   position: relative
   .logo-wrap
     color: $log-cl
@@ -15,8 +15,6 @@ header
 .site-nav
   font-family: $h2-ff
   font-size: $menu-fsz
-  // display: flex
-  // align-items: center
   #checkbox-menu
     display: none
   label
@@ -61,15 +59,19 @@ header
     transform: translateX(-100%)
     opacity: 0
     transition: .5s
+    color: $white
   a
     padding: 10px 10px
     cursor: pointer
-    // position: relative
   #checkbox-menu:checked ~ .main-pg-nav
     transform: translateX(0)    
     opacity: 1
 
+.reg-header
+  background-color: $head-bg
+  // ul a
+  //   color: $bd-cl
+.head-container
+  display: flex
+  justify-content: center
 
-.main-pg-header
-  border-bottom-color: $white
-  color: $white

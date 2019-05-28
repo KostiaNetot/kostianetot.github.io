@@ -1,15 +1,29 @@
+.services
+  h2
+    position: relative
+    span
+      position: absolute
+      height: 1px
+      width: 40px
+      content: ''
+      background-color: $red
+      display: inline-block
+      top: 32px
+      transform: translateX(10px)
+      
 .services-content
-  justify-content: space-between
+  flex-direction: column
+  // justify-content: space-between
   .left-content, .right-content
-    width: 300px
-    margin-right: 25px
+    // width: 300px
+    // margin-right: 25px
+    width: 100%
     flex: 1
     display: flex
     flex-direction: column
   .right-content
-    margin-right: 0
-    margin-left: 25px
-
+    // margin-right: 0
+    // margin-left: 25px
 
 .services-item
   flex: 1
@@ -32,10 +46,23 @@
     background-color: #fff
     flex: 1
     border-radius: 0 0 10px 10px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     p
       padding-top: 15px
       padding-bottom: 15px
     a
+      display: inline-block
       text-align: right
-      // padding: 5px 0
       cursor: pointer
+      position: relative
+      &:after
+        position: absolute
+        height: 1px
+        width: 82px
+        background-color: $red
+        display: inline-block
+        content: ''
+        bottom: -3px
+        right: 0
