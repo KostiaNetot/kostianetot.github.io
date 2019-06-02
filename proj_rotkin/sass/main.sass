@@ -84,10 +84,86 @@ h2
       margin: 70px 0
 
 .gallery
+  position: relative
+  height: 100vh
   h2
     text-align: center
-  img
-    margin-bottom: 30px
+  .prev
+    position: absolute
+    bottom: 150px
+    left: 0
+    cursor: pointer
+  .next
+    position: absolute
+    bottom: 150px
+    right: 0
+    cursor: pointer
+.galery-slider
+  overflow: hidden
+  outline: 1px solid aqua
+  position: relative
+  width: 780px
+  margin: 0 auto
+  &-cont
+    display: flex
+    transition: .3s
+    a
+      margin: 10px
+      width: 390px
+      height: 310px
+      overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      transition: .3s
+      filter: grayscale(80%)
+      &:hover
+        transform: scale(1.1)
+        filter: grayscale(0%)
+
+.projects
+  h2
+    text-align: right
+  .projects-slider
+    .inner-row 
+      display: flex
+    a
+      width: 225px
+      height: 270px
+      padding: 10px
+    .slide-pic
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .wrap-proj-btn
+    width: 100%
+    display: flex
+    justify-content: flex-end
+  .more-proj
+    @extend %btn
+    width: 250px
+    color: $body-bg
+    padding: 15px
+
+.reviews
+  .row
+    display: flex
+    flex-direction: column
+.review-item
+  margin-bottom: 120px
+    // .wrap-img
+    //   width: 100px
+    //   height: 100px
+    //   border-radius: 50% 
+    //   background-color: red
+    //   display: inline-block
+  p
+    padding: 0 150px
+  .review-item::nth-child(1)
+    display: none
+
+
 
 
   @import "media"

@@ -54,8 +54,9 @@ h2 {
   padding: 50px 0;
 }
 
-.head-wrap a {
+.head-wrap a, .projects .more-proj {
   background-color: #dddddd;
+  font-weight: bold;
   text-align: center;
   font-size: 18px;
 }
@@ -160,11 +161,115 @@ nav .social-head a:nth-child(3) {
   margin: 70px 0;
 }
 
+.gallery {
+  position: relative;
+  height: 100vh;
+}
 .gallery h2 {
   text-align: center;
 }
-.gallery img {
-  margin-bottom: 30px;
+.gallery .prev {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  cursor: pointer;
+}
+.gallery .next {
+  position: absolute;
+  bottom: 150px;
+  right: 0;
+  cursor: pointer;
+}
+
+.galery-slider {
+  overflow: hidden;
+  outline: 1px solid aqua;
+  position: relative;
+  width: 780px;
+  margin: 0 auto;
+}
+.galery-slider-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.galery-slider-cont a {
+  margin: 10px;
+  width: 390px;
+  height: 310px;
+  overflow: hidden;
+}
+.galery-slider-cont img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+.galery-slider-cont img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.projects h2 {
+  text-align: right;
+}
+.projects .projects-slider .inner-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.projects .projects-slider a {
+  width: 225px;
+  height: 270px;
+  padding: 10px;
+}
+.projects .projects-slider .slide-pic {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .wrap-proj-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.projects .more-proj {
+  width: 250px;
+  color: #292d4a;
+  padding: 15px;
+}
+
+.reviews .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.review-item {
+  margin-bottom: 120px;
+}
+.review-item p {
+  padding: 0 150px;
+}
+.review-item .review-item::nth-child(1) {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
