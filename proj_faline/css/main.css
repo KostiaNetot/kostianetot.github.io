@@ -177,7 +177,7 @@ header .logo-wrap p {
   position: absolute;
   left: 0;
   bottom: -269px;
-  width: 80vw;
+  width: 80%;
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);

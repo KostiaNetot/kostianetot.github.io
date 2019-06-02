@@ -1,0 +1,93 @@
+@import "fonts"
+@import "normalize"
+@import "settings"
+
+
+body
+  font-family: $body-ff
+  font-size: $body-fsz
+  color: $body-col
+  background-color: $body-bg
+// HEADER
+header
+  height: 100vh
+  background: url(../img/header/1.jpg) center no-repeat
+  background-size: cover
+  padding-top: 20px
+  // .container
+  //   display: flex
+  //   flex-direction: column
+  //   height: 100%
+  //   justify-content: space-between
+nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 40px
+  background: rgba(0,0,0,0.3)
+  font-size: 18px
+  font-family: $nav-ff
+  text-transform: uppercase
+  padding: 0 20px
+  .list-navigation
+    display: flex
+    a
+      padding-right: 15px
+  .social-head
+    display: flex
+    a
+      margin-left: 10px
+  .social-head 
+    a
+      width: 32px
+      height: 32px
+      border: 1px solid #f35510
+      border-radius: 50%
+      background-image: url(../img/sprite.png)
+      background-position: 255px 85px
+    a:nth-child(2)
+      border-color: #414f90
+      background-position: 257px 46px
+    a:nth-child(3)
+      background-position: 255px 124px
+
+.head-wrap
+  width: 50%
+  margin-top: 30vh  
+  h1
+    @extend %h1
+    color: $body-bg
+    margin-bottom: 25px
+  span
+    font-size: $h1-fsz
+    font-family: 'Open Sans', sans-serif
+    font-style: italic
+    font-weight: 400
+    line-height: 1
+    color: $body-bg
+  a
+    @extend %btn
+    width: 195px
+    background-color: $body-bg
+    padding: 11px 0
+    margin-top: 80px
+
+// MAIN
+h2
+  @extend %h2
+.biography
+  .bio-item
+    display: flex
+    flex-direction: column
+    img
+      width: auto
+      margin: 70px 0
+
+.gallery
+  h2
+    text-align: center
+  img
+    margin-bottom: 30px
+
+
+  @import "media"
