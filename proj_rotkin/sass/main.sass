@@ -69,6 +69,7 @@ nav
     @extend %btn
     width: 195px
     background-color: $body-bg
+    color: $body-col
     padding: 11px 0
     margin-top: 80px
 
@@ -121,10 +122,15 @@ h2
       &:hover
         transform: scale(1.1)
         filter: grayscale(0%)
+/*--------------------------------------*/
 
 .projects
   h2
     text-align: right
+  .row
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
   .projects-slider
     .inner-row 
       display: flex
@@ -145,25 +151,193 @@ h2
     width: 250px
     color: $body-bg
     padding: 15px
+/*--------------------------------------*/
 
 .reviews
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
   .row
     display: flex
     flex-direction: column
 .review-item
   margin-bottom: 120px
-    // .wrap-img
-    //   width: 100px
-    //   height: 100px
-    //   border-radius: 50% 
-    //   background-color: red
-    //   display: inline-block
-  p
-    padding: 0 150px
-  .review-item::nth-child(1)
-    display: none
+  padding: 0 120px
+  position: relative
+  &:nth-child(1):before
+    content: ''
+    display: block
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    background: url(../img/cat.jpg) center no-repeat
+    background-size: cover
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+  &:nth-child(2):after
+    content: ''
+    display: block
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    background: url(../img/dog.jpg) center no-repeat
+    background-size: cover
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+  /*--------------------------------------*/
+
+.contact 
+  height: 100vh
+  h2
+    text-align: center
+  .row
+    justify-content: space-between
+  form
+    width: 420px
+    display: flex
+    flex-direction: column
+    position: relative
+    z-index: 99
+    &:before
+      position: absolute
+      top: -70px
+      left: -70px
+      content: ''
+      display: block
+      width: 150px
+      height: 150px
+      border-radius: 50%
+      background-color: #F6540D
+      box-shadow: 3px 2px 71px 2px rgba(0,0,0,0.57) inset
+      z-index: -1
+    input
+      height: 46px
+      margin-bottom: 30px
+      padding: 0 15px
+      font-weight: 700
+    input[type=submit]
+      @extend %btn
+      width: 220px
+      cursor: pointer
+    textarea
+      padding: 15px
+      height: 150px
+      resize: none
+      margin-bottom: 30px
+      font-weight: 700
+      outline: 0
+  .cotact-info
+    p
+      @extend %h1
+  .social-contact
+    display: flex 
+    margin-top: 60px
+    a
+      width: 48px
+      height: 48px
+      margin-right: 13px
+      border: 1px solid #f35510
+      border-radius: 50%
+      background-image: url(../img/sprite.png)
+      background-position: 258px 278px
+    a:nth-child(2)
+      border-color: #414f90
+      background-position: 261px 178px
+    a:nth-child(3)
+      background-position: 257px 366px
+/*--------------------------------------*/
+
+footer
+  padding-top: 50px
+  background-color: #1F2238
+  .row
+    display: flex
+    flex-direction: space-between
+  .foot-item
+    width: 25%
+  .foot-social
+    display: flex
+    justify-content: center
+    a
+      width: 32px
+      height: 32px
+      margin-right: 10px
+      border: 1px solid #f35510
+      border-radius: 50%
+      background-image: url(../img/sprite.png)
+      background-position: 255px 85px
+    a:nth-child(2)
+      border-color: #414f90
+      background-position: 257px 46px
+    a:nth-child(3)
+      background-position: 255px 124px
+      margin-right: 0
+  .some-info
+    padding-right: 15px
+    h3
+      font-family: $h1-ff
+      font-size: 18px
+    p
+      margin: 24px 0
+      font-size: 0.8em
+    .btn
+      @extend %btn
+      font-size: 0.8em
+      padding: 10px 0
+      width: 150px
+  .phone
+    display: flex
+    justify-content: center
+    position: relative
+    padding-top: 60px
+    &:before
+      position: absolute
+      content: ''
+      display: block
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 40px
+      height: 40px
+      margin-right: 10px
+      border: 1px solid #f35510
+      border-radius: 50%
+      background-image: url(../img/sprite.png)
+      background-position: 254px 226px  
+  .email
+    display: flex
+    justify-content: center
+    position: relative
+    padding-top: 60px
+    &:before
+      position: absolute
+      content: ''
+      display: block
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 40px
+      height: 40px
+      margin-right: 10px
+      border: 1px solid #f35510
+      border-radius: 50%
+      background-image: url(../img/sprite.png)
+      background-position: 255px 321px
 
 
+
+  .sub-footer
+    text-align: right
+    padding: 10px 0
+    font-size: 0.8em
+    p, a
+      display: inline-block
 
 
   @import "media"
