@@ -2,39 +2,88 @@
 @import "normalize"
 @import "settings"
 
-
 body
   font-family: $body-ff
   font-size: $body-fsz
   color: $body-col
   background-color: $body-bg
 // HEADER
+.btn-rotated
+  transform: rotate(90deg)
 header
   height: 100vh
   background: url(../img/header/1.jpg) center no-repeat
   background-size: cover
-  padding-top: 20px
-  // .container
-  //   display: flex
-  //   flex-direction: column
-  //   height: 100%
-  //   justify-content: space-between
+  .burger-btn
+    position: fixed
+    top: 10px
+    left: 10px
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: rgba(0,0,0,0.5)
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .3s
+    z-index: 9999 
+    span
+      position: relative
+      content: ''
+      display: block
+      width: 25px
+      height: 3px
+      background-color: #fff
+      &:before
+        content: ''
+        display: block 
+        position: absolute
+        width: 50%
+        height: 100%
+        top: -6px
+        background-color: inherit
+      &:after
+        content: ''
+        display: block 
+        position: absolute
+        width: 50%
+        height: 100%
+        bottom: -6px
+        right: 0
+        background-color: inherit  
 nav
   display: flex
-  justify-content: space-between
-  align-items: center
+  flex-direction: column
   height: 40px
-  background: rgba(0,0,0,0.3)
+  background-color: rgba(0,0,0,0)
   font-size: 18px
   font-family: $nav-ff
   text-transform: uppercase
   padding: 0 20px
+  position: relative
+  top: 20px
   .list-navigation
     display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    position: absolute
+    top: 40px
+    left: 0
+    width: 70%
+    transform: translateX(-100%)
+    opacity: 0
+    transition: .3s
+  .list-navigation-show
+    transform: translateX(0)
+    opacity: 1
+    transition: .3s 
     a
+      padding: 10px
       padding-right: 15px
+      background: rgba(0,0,0,0.5)
   .social-head
     display: flex
+    display: none
     a
       margin-left: 10px
   .social-head 
@@ -52,8 +101,13 @@ nav
       background-position: 255px 124px
 
 .head-wrap
-  width: 50%
-  margin-top: 30vh  
+  width: 100%
+  height: 100vh
+  // margin-top: 30vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start  
   h1
     @extend %h1
     color: $body-bg
@@ -72,36 +126,91 @@ nav
     color: $body-col
     padding: 11px 0
     margin-top: 80px
+    align-self: center
 
 // MAIN
 h2
   @extend %h2
+  font-size: 50px
 .biography
+  .row:nth-child(1)
+    background: url(../img/main/bg1.png) top right no-repeat
+    background-size: contain
   .bio-item
     display: flex
     flex-direction: column
+    position: relative
+    z-index: 200 !important
+    p
+      margin-bottom: 30px
+    .wrap-img
+      width: 100%
     img
-      width: auto
-      margin: 70px 0
+      // width: auto
+      width: 100%
+      // margin: 20px 0
+      // margin: 70px 0
+      margin-bottom: 50px
+      box-shadow: -3px -3px 10px 1px rgba(0,0,0,0.5)
+  .row:nth-child(2)
+    flex-direction: column
+  .row:nth-child(1) .bio-item:before
+    @extend %circle
+    width: 250px
+    height: 250px
+    top: 55px
+    left: -111px 
+  .row:nth-child(2) .bi-1:before
+    @extend %circle
+    width: 150px
+    height: 150px
+    top: 186px
+    left: -75px
+    box-shadow: 3px 2px 30px 2px rgba(0,0,0,0.57) inset
+  .row:nth-child(2) .bi-1:after
+    @extend %circle
+    width: 290px
+    height: 290px
+    bottom: -51px
+    right: -43px
+  .row:nth-child(2) .bi-2:before
+    @extend %circle
+    width: 240px
+    height: 240px
+    top: -27px
+    left: 160px
+    z-index: -1
+  .row:nth-child(2) .bi-2:after
+    @extend %circle
+    width: 80px
+    height: 80px
+    bottom: 104px
+    left: -40px
+    box-shadow: 3px 2px 20px 2px rgba(0,0,0,0.57) inset
+
 
 .gallery
-  position: relative
   height: 100vh
-  h2
-    text-align: center
-  .prev
-    position: absolute
-    bottom: 150px
-    left: 0
-    cursor: pointer
-  .next
-    position: absolute
-    bottom: 150px
-    right: 0
-    cursor: pointer
-.galery-slider
-  overflow: hidden
+  margin-bottom: 100px
+  // background: url(../img/main/bg3.png) left no-repeat
+  background-size: auto
+  .container
+    position: relative
+    .prev
+      position: absolute
+      bottom: 205px
+      left: 50%
+      transform: translateX(-440px)
+    .next
+      position: absolute
+      bottom: 205px
+      right: 50%
+      transform: translateX(450px)
+    h2
+      text-align: center
+.gallery-slider
   outline: 1px solid aqua
+  overflow: hidden
   position: relative
   width: 780px
   margin: 0 auto
@@ -110,8 +219,8 @@ h2
     transition: .3s
     a
       margin: 10px
-      width: 390px
-      height: 310px
+      width: 370px
+      height: 410px
       overflow: hidden
     img
       width: 100%
@@ -125,17 +234,39 @@ h2
 /*--------------------------------------*/
 
 .projects
+  // height: 100vh
+  margin-bottom: 100px
+  .container
+    position: relative
+    overflow: hidden
+    &:after
+      position: absolute
+      content: ''
+      display: block
+      width: 50%
+      height: 100%
+      bottom: -80px
+      right: 0
+      background: url(../img/main/bg2.png) left no-repeat
+      background-size: contain
+      z-index: -1
+  //   background: url(../img/main/bg2.png) right no-repeat
+  //   background-size: contain
+    // background-position-x: center
   h2
-    text-align: right
+    text-align: center
   .row
     display: flex
-    justify-content: space-between
-    align-items: flex-end
+    flex-direction: column
+    // justify-content: space-between
+    // align-items: flex-end
   .projects-slider
+    width: 100%
+    margin-bottom: 50px
     .inner-row 
       display: flex
     a
-      width: 225px
+      width: 300px
       height: 270px
       padding: 10px
     .slide-pic
@@ -145,26 +276,31 @@ h2
   .wrap-proj-btn
     width: 100%
     display: flex
-    justify-content: flex-end
+    justify-content: center
   .more-proj
     @extend %btn
     width: 250px
     color: $body-bg
     padding: 15px
+    z-index: 100
 /*--------------------------------------*/
 
 .reviews
-  height: 100vh
+  // height: 100vh
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  h2
+    text-align: center
   .row
     display: flex
     flex-direction: column
 .review-item
-  margin-bottom: 120px
-  padding: 0 120px
+  // margin-bottom: 120px
+  // padding: 0 120px
+  padding: 15px
+  padding-top: 120px
   position: relative
   &:nth-child(1):before
     content: ''
@@ -175,9 +311,12 @@ h2
     background: url(../img/cat.jpg) center no-repeat
     background-size: cover
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    left: 0
+    // top: 50%
+    // transform: translateY(-50%)
+    // left: 0
+    top: 10px
+    left: 50%
+    transform: translateX(-50%)
   &:nth-child(2):after
     content: ''
     display: block
@@ -187,35 +326,40 @@ h2
     background: url(../img/dog.jpg) center no-repeat
     background-size: cover
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    right: 0
+    // top: 50%
+    // transform: translateY(-50%)
+    // right: 0
+    top: 10px
+    right: 50%
+    transform: translateX(50%)
   /*--------------------------------------*/
 
 .contact 
-  height: 100vh
+  // height: 100vh
+  margin-top: 70px
   h2
     text-align: center
   .row
-    justify-content: space-between
+    flex-direction: column
+    // justify-content: space-around
   form
-    width: 420px
+    // width: 420px
+    width: 90%
+    margin: 0 auto
     display: flex
     flex-direction: column
     position: relative
     z-index: 99
     &:before
-      position: absolute
+      @extend %circle
       top: -70px
       left: -70px
-      content: ''
-      display: block
-      width: 150px
-      height: 150px
-      border-radius: 50%
-      background-color: #F6540D
-      box-shadow: 3px 2px 71px 2px rgba(0,0,0,0.57) inset
-      z-index: -1
+    &:after
+      @extend %circle
+      width: 250px
+      height: 250px
+      bottom: -58px
+      right: -129px  
     input
       height: 46px
       margin-bottom: 30px
@@ -224,6 +368,8 @@ h2
     input[type=submit]
       @extend %btn
       width: 220px
+      margin: 0 auto
+      margin-bottom: 30px
       cursor: pointer
     textarea
       padding: 15px
@@ -233,10 +379,21 @@ h2
       font-weight: 700
       outline: 0
   .cotact-info
+    position: relative
+    z-index: 100
+    &:before
+      @extend %circle
+      width: 290px
+      height: 290px
+      right: -177px
+      top: -43px
     p
       @extend %h1
+      font-size: 40px
+      text-align: center
   .social-contact
     display: flex 
+    justify-content: center
     margin-top: 60px
     a
       width: 48px
@@ -246,6 +403,7 @@ h2
       border-radius: 50%
       background-image: url(../img/sprite.png)
       background-position: 258px 278px
+      z-index: 100
     a:nth-child(2)
       border-color: #414f90
       background-position: 261px 178px
@@ -258,9 +416,11 @@ footer
   background-color: #1F2238
   .row
     display: flex
-    flex-direction: space-between
+    flex-direction: column
+    // flex-direction: space-between
   .foot-item
-    width: 25%
+    // width: 25%
+    width: 100%
   .foot-social
     display: flex
     justify-content: center
@@ -279,7 +439,8 @@ footer
       background-position: 255px 124px
       margin-right: 0
   .some-info
-    padding-right: 15px
+    padding: 15px
+    // padding-right: 15px
     h3
       font-family: $h1-ff
       font-size: 18px
@@ -296,6 +457,7 @@ footer
     justify-content: center
     position: relative
     padding-top: 60px
+    padding-bottom: 20px
     &:before
       position: absolute
       content: ''
@@ -315,6 +477,7 @@ footer
     justify-content: center
     position: relative
     padding-top: 60px
+    padding-bottom: 20px
     &:before
       position: absolute
       content: ''
@@ -334,10 +497,10 @@ footer
 
   .sub-footer
     text-align: right
-    padding: 10px 0
+    padding: 30px 15px
     font-size: 0.8em
     p, a
       display: inline-block
 
 
-  @import "media"
+@import "media"
