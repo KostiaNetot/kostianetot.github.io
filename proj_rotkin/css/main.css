@@ -159,6 +159,9 @@ nav {
   top: 20px;
 }
 nav .list-navigation {
+  position: fixed;
+  top: 50px;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,15 +171,13 @@ nav .list-navigation {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: absolute;
-  top: 40px;
-  left: 0;
   width: 70%;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 9999;
 }
 nav .list-navigation-show {
   -webkit-transform: translateX(0);
@@ -258,6 +259,9 @@ h2 {
   font-size: 50px;
 }
 
+.biography {
+  overflow: hidden;
+}
 .biography .row:nth-child(1) {
   background: url(../img/main/bg1.png) top right no-repeat;
   background-size: contain;
@@ -330,6 +334,7 @@ h2 {
 .gallery {
   height: 100vh;
   margin-bottom: 100px;
+  overflow: hidden;
   background-size: auto;
 }
 .gallery .container {
@@ -524,6 +529,7 @@ h2 {
 
 .contact {
   margin-top: 70px;
+  overflow: hidden;
 }
 .contact h2 {
   text-align: center;
@@ -766,7 +772,8 @@ footer .sub-footer p, footer .sub-footer a {
             justify-content: center;
   }
   .gallery .container {
-    margin: 7vh auto;
+    margin: 0 auto;
+    padding-top: 10vh;
   }
 
   .projects .container:after {
@@ -808,13 +815,37 @@ footer .sub-footer p, footer .sub-footer a {
     padding: 10px;
   }
 }
+@media (max-width: 992px) {
+  .biography .row:nth-child(2) .bi-2:before {
+    display: none;
+  }
+
+  .contact .cotact-info:before {
+    display: none;
+  }
+}
 @media (min-width: 992px) {
+  .col {
+    width: 50%;
+  }
+
   .container {
     max-width: 960px;
   }
 
   header .burger-btn {
     display: none;
+  }
+  header .head-wrap {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 85vh;
+  }
+  header .head-wrap a {
+    padding-right: 15px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   header nav {
     -webkit-box-orient: horizontal;
@@ -840,13 +871,28 @@ footer .sub-footer p, footer .sub-footer a {
             flex-direction: row;
     top: 0;
   }
-  header .list-navigation a {
-    padding-right: 15px;
-  }
   header .social-head {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .biography img {
+    width: auto;
+  }
+  .biography .row:nth-child(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .biography .row:nth-child(2) .bi-2:before {
+    top: -80px;
+    left: 194px;
+  }
+  .biography .row:nth-child(2) .bi-2:after {
+    bottom: 100px;
+    left: 20px;
   }
 
   .projects .container:after {
@@ -864,6 +910,19 @@ footer .sub-footer p, footer .sub-footer a {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+
+  .contact .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contact form {
+    width: 420px;
+    margin: 0;
   }
 }
 @media (min-width: 1200px) {

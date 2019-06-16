@@ -20,7 +20,8 @@
     justify-content: center
     // align-items: center
     .container
-      margin: 7vh auto
+      margin: 0 auto
+      padding-top: 10vh
   .projects
     .container:after
       bottom: 9px
@@ -47,12 +48,28 @@
     .sub-footer
       padding: 10px
 
+@media (max-width: 992px)
+  .biography
+    .row:nth-child(2) .bi-2:before
+      display: none
+  .contact
+    .cotact-info
+      &:before
+        display: none    
 @media (min-width: 992px)
+  .col
+    width: 50%
   .container
     max-width: 960px
   header
     .burger-btn
       display: none
+    .head-wrap
+      justify-content: flex-end
+      height: 85vh
+      a
+        padding-right: 15px
+        align-self: flex-start
     nav
       flex-direction: row
       justify-content: space-between
@@ -64,10 +81,20 @@
       transform: translateX(0)
       flex-direction: row
       top: 0
-      a
-        padding-right: 15px
+
     .social-head
-      display: flex  
+      display: flex
+  .biography
+    img
+      width: auto
+    .row:nth-child(2)
+      flex-direction: row
+    .row:nth-child(2) .bi-2:before
+      top: -80px
+      left: 194px
+    .row:nth-child(2) .bi-2:after
+      bottom: 100px
+      left: 20px    
   .projects
     .container:after
       bottom: -50px
@@ -76,6 +103,15 @@
       flex-direction: row
       justify-content: space-between
       align-items: flex-end
+  .contact
+    .row
+      flex-direction: row
+      justify-content: space-around
+    form
+      width: 420px
+      margin: 0
+    // .contact-info:before
+    //   display: block
 
 @media (min-width: 1200px)
   .container
