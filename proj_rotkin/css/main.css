@@ -842,7 +842,7 @@ footer .sub-footer p, footer .sub-footer a {
             justify-content: flex-end;
     height: 85vh;
   }
-  header .head-wrap a {
+  header a {
     padding-right: 15px;
     -ms-flex-item-align: start;
         align-self: flex-start;
