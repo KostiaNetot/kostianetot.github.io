@@ -89,8 +89,16 @@ body {
 
 header {
   height: 100vh;
-  background: url(../img/header/1.jpg) center no-repeat;
-  background-size: cover;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+header .head-slider {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  z-index: -1;
 }
 header .burger-btn {
   position: fixed;
@@ -276,6 +284,9 @@ h2 {
           flex-direction: column;
   position: relative;
   z-index: 200 !important;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .biography .bio-item p {
   margin-bottom: 30px;
@@ -748,6 +759,13 @@ footer .sub-footer p, footer .sub-footer a {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+  }
+
+  header .head-wrap {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 85vh;
   }
 }
 @media (min-width: 768px) {

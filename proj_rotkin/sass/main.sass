@@ -12,8 +12,16 @@ body
   transform: rotate(90deg)
 header
   height: 100vh
-  background: url(../img/header/1.jpg) center no-repeat
-  background-size: cover
+  width: 100%
+  // background: url(../img/header/1.jpg) center no-repeat
+  // background-size: cover
+  position: relative
+  overflow: hidden
+  .head-slider
+    position: absolute
+    object-fit: cover
+    height: 100%
+    z-index: -1
   .burger-btn
     position: fixed
     top: 10px
@@ -142,6 +150,8 @@ h2
     flex-direction: column
     position: relative
     z-index: 200 !important
+    opacity: 0
+    transition: all .3s
     p
       margin-bottom: 30px
     .wrap-img
