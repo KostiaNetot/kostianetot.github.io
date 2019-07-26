@@ -1,0 +1,90 @@
+// @media (max-width: 575px)
+
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+  .reg-header
+    h1
+      font-size: 36px
+    p
+      font-size: 24px
+  .main-pg-header
+    .main-h
+      font-size: 52px
+    p
+      font-size: 32px
+  .services-content
+    flex-direction: row
+    justify-content: space-between
+    .left-content
+      width: 300px
+      margin-right: 25px
+    .right-content
+      width: 300px
+      margin-left: 25px
+  .footer-container
+    justify-content: space-around
+  // .under-footer
+  //   font-size: 1em
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+  header, .head-container
+    justify-content: space-between
+    align-items: center
+  .site-nav
+    label
+      display: none
+    span
+      display: none
+    .main-pg-nav
+      position: relative
+      bottom: 0
+      transform: translateX(0)
+      width: auto
+      opacity: 1
+      background-color: transparent
+      display: flex
+      align-items: center
+      justify-content: space-between
+      a
+        border-top: 2px solid transparent
+        transition: all .3s
+        &:hover
+          border-top: 2px solid $white
+          color: $white
+  .main-pg-header .main-pg-nav a:hover
+    color: $log-cl
+  .reg-header
+    ul a
+      color: $bd-cl
+
+        
+  footer, .footer-container
+    flex-direction: row
+    button
+      font-size: 18px
+      border-radius: 20px
+  .reg-footer
+    // height: auto
+
+/*----- SERVICES PAGE ------*/
+  .services-content
+    // justify-content: space-between
+    .left-content, .right-content
+      // width: 320px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1140px
+  header
+    .logo-wrap
+      h1
+        font-size: 64px
+      p
+        font-size: 36px

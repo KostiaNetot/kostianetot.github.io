@@ -1,0 +1,129 @@
+.breadcrumbs
+  display: flex
+  order: 1
+  li
+    padding: 0 8px
+    line-height: 5rem
+  .none
+    // display: none
+  .current
+    pointer-events: none
+
+.side-bar-wrap
+  order: 4
+
+.side-bar
+  padding: 0 15px
+  margin-bottom: 28px
+  background-color: $white
+  input[type="checkbox"]
+    display: none
+  label
+    line-height: 32px
+    padding-left: 30px
+    position: relative
+    cursor: pointer
+  label::before
+    width: 22px
+    height: 22px
+    content: ''
+    display: block
+    position: absolute
+    top: -3px
+    left: 0
+    background-color: $input-bg
+    border: 1px solid $body-bg
+  label::after
+    width: 7px
+    height: 12px
+    content: ''
+    display: block
+    border-right: 3px solid $input-bg
+    border-bottom: 3px solid $input-bg
+    position: absolute
+    top: 0
+    left: 8px
+    transform: rotate(45deg)
+  input[type="checkbox"]:checked ~ label::before
+    background-color: $blue
+    border-color: $blue
+  input[type="checkbox"]:checked ~ label::after
+    border-color: $white
+  &-categ
+    padding: 20px 0
+    border-bottom: 1px solid $body-color
+    border-color: lighten($body-color, 35%)
+  &-price
+    @extend .side-bar-categ
+    p
+      line-height: 32px
+    .price-slice
+      height: 6px
+      width: 100%
+      margin-top: 10px
+      background-color: $red
+      position: relative
+      .left-sqr
+        display: inline-block
+        width: 18px
+        height: 18px
+        background-color: $blue
+        position: absolute
+        top: -6px
+        left: 0
+        cursor: pointer
+      .right-sqr
+        display: inline-block
+        width: 18px
+        height: 18px
+        background-color: $blue
+        position: absolute
+        top: -6px
+        right: 0
+        cursor: pointer
+  &-vendors
+    padding: 20px 0
+  h3
+    margin-left: 0
+.temp-block
+  height: 245px
+  padding: 5px
+  position: relative
+  overflow: hidden
+  img
+    min-height: 100%
+    object-fit: cover
+  .text-wrap
+    position: absolute
+    top: 16px
+    left: 16px
+    color: $white
+  h4
+    font-size: 2.5rem
+  p
+    margin: 15px 0
+    font-weight: 500
+
+.categ-main-wrap
+  order: 3
+
+.categ-main-content
+  h3
+    text-transform: uppercase
+    font-size: 3.6rem
+    margin-left: 0
+  p
+    margin-bottom: 20px
+  .products-item-wrap
+    padding: 10px
+  .products-item
+    // margin: 5px
+    background-color: $white
+    &:hover
+      background-color: darken($white, 5%)
+    button
+      width: 100%
+      .fa-shopping-cart::before
+        position: relative
+        bottom: 2px
+        left: -6px
