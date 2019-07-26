@@ -1,0 +1,122 @@
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+  header
+    .head-wrap
+      justify-content: flex-end
+      height: 85vh
+
+@media (min-width: 768px)
+  // .col
+  //   width: 50%
+  .container
+    max-width: 720px
+  .biography
+    .bio-item
+      img
+        width: auto
+    .row:nth-child(2)
+      img
+        margin: 0 auto
+        margin-bottom: 50px
+  .gallery
+    display: flex
+    justify-content: center
+    // align-items: center
+    .container
+      margin: 0 auto
+      padding-top: 10vh
+  .projects
+    .container:after
+      bottom: 9px
+      right: -52px
+  .review-item
+    padding: 0 100px
+    padding-bottom: 120px
+    &:nth-child(1)
+      padding-left: 200px
+      &:before
+        left: 120px
+        top: -17px
+    &:nth-child(2)
+      padding-right: 200px
+      &:after
+        right: 130px
+        top: -17px
+  footer
+    .row
+      flex-direction: row
+      flex-wrap: wrap
+    .foot-item
+      width: 25%
+    .sub-footer
+      padding: 10px
+
+@media (max-width: 992px)
+  .biography
+    .row:nth-child(2) .bi-2:before
+      display: none
+  .contact
+    .cotact-info
+      &:before
+        display: none    
+@media (min-width: 992px)
+  .col
+    width: 50%
+  .container
+    max-width: 960px
+  header
+    .burger-btn
+      display: none
+    .head-wrap
+      justify-content: flex-end
+      height: 85vh
+      a
+        align-self: flex-start
+    nav
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      background-color: rgba(0,0,0,0.3)
+      a
+        padding-right: 15px
+    .list-navigation
+      opacity: 1
+      position: relative
+      transform: translateX(0)
+      flex-direction: row
+      top: 0
+    .social-head
+      display: flex
+  .biography
+    img
+      width: auto
+    .row:nth-child(2)
+      flex-direction: row
+    .row:nth-child(2) .bi-2:before
+      top: -80px
+      left: 194px
+    .row:nth-child(2) .bi-2:after
+      bottom: 100px
+      left: 20px    
+  .projects
+    .container:after
+      bottom: -50px
+      right: -85px
+    .row
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+  .contact
+    .row
+      flex-direction: row
+      justify-content: space-around
+    form
+      width: 420px
+      margin: 0
+    // .contact-info:before
+    //   display: block
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1140px
