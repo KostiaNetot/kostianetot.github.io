@@ -55,14 +55,43 @@
 
 /*----------------- GALLERY SLIDER --------------------------*/
 (function () {
-	let gallery = document.querySelector('.gallery');
-	let containerWidth = document.querySelector('.container').offsetWidth;
 	let sliderWrap = document.querySelector('.gallery-slider-wrap');
+	let btnPrev = sliderWrap.querySelector('.prev')
+	let btnNext = sliderWrap.querySelector('.next');
+	let gallery = document.querySelector('.gallery-slider');
+	// let containerWidth = document.querySelector('.container').offsetWidth;
+	let images = document.querySelectorAll('.slider-item');
+	let count = 0;
 
-	sliderWrap.style.width = (containerWidth/100)*90 +'px';
-	sliderWrap.style.height = ((containerWidth/100)*90)/1.77 +'px';
+	function changePics() {
+		for (let i=0; i<images.length; i++) {
+			images[i].classList.add('opacity0');
+		}
+		images[count].classList.remove('opacity0');
+	}
+	changePics();
+
+	btnPrev.addEventListener('click', function () {
+		if (count-1 == -1) {
+			count = images.length-1;
+		}
+		else {
+			count--;
+		}
+		changePics();
+	});
+	btnNext.addEventListener('click', function () {
+		if (count+1 == images.length) {
+			count = 0;
+		}
+		else {
+			count++;
+		}
+		changePics();
+	});
+
+	console.log(btnPrev);
 	
-	console.log(containerWidth);
 })();
 
 
