@@ -52,6 +52,20 @@
 		}
 	}
 })();
+
+/*----------------- GALLERY SLIDER --------------------------*/
+(function () {
+	let gallery = document.querySelector('.gallery');
+	let containerWidth = document.querySelector('.container').offsetWidth;
+	let sliderWrap = document.querySelector('.gallery-slider-wrap');
+
+	sliderWrap.style.width = (containerWidth/100)*90 +'px';
+	sliderWrap.style.height = ((containerWidth/100)*90)/1.77 +'px';
+	
+	console.log(containerWidth);
+})();
+
+
 /*---
 (function () {
 //твой код

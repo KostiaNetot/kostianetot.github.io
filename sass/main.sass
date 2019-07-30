@@ -210,47 +210,58 @@ h2
 
 
 .gallery
-  height: 100vh
+  // height: 100vh
   margin-bottom: 100px
   overflow: hidden /*********/
   background-size: auto
   .container
     position: relative
-    .prev
-      position: absolute
-      bottom: 205px
-      left: 50%
-      transform: translateX(-440px)
-    .next
-      position: absolute
-      bottom: 205px
-      right: 50%
-      transform: translateX(450px)
     h2
       text-align: center
-.gallery-slider
-  outline: 1px solid aqua
-  overflow: hidden
-  position: relative
-  width: 780px
+.gallery-slider-wrap
+  // outline: 2px solid aqua
   margin: 0 auto
-  &-cont
-    display: flex
+  position: relative
+  .prev, .next
+    position: absolute
+    z-index: 20
+    height: 100%
+    width: 50px
+    background-color: rgba(0,0,0,0.2)
+    cursor: pointer
     transition: .3s
-    a
-      margin: 10px
-      width: 370px
-      height: 410px
-      overflow: hidden
+    &:before
+      position: absolute
+      content: ''
+      display: block
+      width: 30px
+      height: 30px
+      border-top: 2px solid #fff
+      border-left: 2px solid #fff
+      // left: 50%
+      top: 50%
+  .prev
+    top: 0
+    left: 0
+    &:before
+      transform: rotate(-45deg)
+      // transform: rotate(-45deg) translate(-50%, -50%)
+  .next
+    top: 0
+    right: 0
+    &:before
+      transform: rotate(135deg)
+      // transform: rotate(135deg) translate(-50%, -50%)
+  .gallery-slider
+    width: 100%
+    height: 100%
+    overflow: hidden
+    position: relative
     img
-      width: 100%
       height: 100%
       object-fit: cover
-      transition: .3s
-      filter: grayscale(80%)
-      &:hover
-        transform: scale(1.1)
-        filter: grayscale(0%)
+      position: absolute
+
 /*--------------------------------------*/
 
 .projects
