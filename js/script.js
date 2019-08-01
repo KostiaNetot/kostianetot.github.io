@@ -41,13 +41,13 @@
 	window.onscroll = function() {
 		
 		if (scrolled < header.offsetHeight) {
-			bioItem1.className = 'animated slideInLeft';
+			bioItem1.className = 'bio-item animated slideInLeft';
 			bioItem1.style.opacity = 1;	
 		}
 		if (scrolled < (header.offsetHeight+bioItem1.parentElement.offsetHeight)) {
-			bioItem2.className = 'animated slideInUp';
+			bioItem2.className = 'bio-item animated slideInUp';
 			bioItem2.style.opacity = 1;
-			bioItem3.className = 'animated slideInRight';
+			bioItem3.className = 'bio-item animated slideInRight';
 			bioItem3.style.opacity = 1;
 		}
 	}

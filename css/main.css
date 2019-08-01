@@ -285,7 +285,7 @@ h2 {
   overflow: hidden;
 }
 .biography .row:nth-child(1) {
-  background: url(../img/main/bg1.png) top right no-repeat;
+  background: url(../img/main/bg4.png) top right no-repeat;
   background-size: contain;
 }
 .biography .bio-item {
@@ -297,7 +297,7 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  z-index: 200 !important;
+  z-index: 200;
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -307,8 +307,10 @@ h2 {
 }
 .biography .bio-item .wrap-img {
   width: 100%;
+  text-align: left;
 }
 .biography .bio-item img {
+  display: inline-block;
   width: 100%;
   margin-bottom: 50px;
   -webkit-box-shadow: -3px -3px 10px 1px rgba(0, 0, 0, 0.5);
@@ -390,10 +392,10 @@ h2 {
   position: absolute;
   content: "";
   display: block;
-  width: 30px;
-  height: 30px;
-  border-top: 2px solid #a0a0c0;
-  border-left: 2px solid #a0a0c0;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #646496;
+  border-left: 2px solid #646496;
   top: 50%;
 }
 .gallery-slider-wrap .prev {
@@ -603,15 +605,18 @@ h2 {
 }
 .contact form input {
   height: 46px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding: 0 15px;
   font-weight: 700;
 }
 .contact form input[type=submit] {
+  font-weight: 400;
   width: 220px;
   margin: 0 auto;
   margin-bottom: 30px;
   cursor: pointer;
+  border: none;
+  outline: 0;
 }
 .contact form textarea {
   padding: 15px;

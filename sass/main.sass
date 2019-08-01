@@ -152,21 +152,23 @@ h2
 .biography
   overflow: hidden
   .row:nth-child(1)
-    background: url(../img/main/bg1.png) top right no-repeat
+    background: url(../img/main/bg4.png) top right no-repeat
     background-size: contain
   .bio-item
     display: flex
     flex-direction: column
     position: relative
-    z-index: 200 !important
+    z-index: 200
     opacity: 0
     transition: all .3s
     p
       margin-bottom: 30px
     .wrap-img
       width: 100%
+      text-align: left
     img
       // width: auto
+      display: inline-block
       width: 100%
       // margin: 20px 0
       // margin: 70px 0
@@ -237,10 +239,10 @@ h2
       position: absolute
       content: ''
       display: block
-      width: 30px
-      height: 30px
-      border-top: 2px solid darken( $body-col, 30% )
-      border-left: 2px solid darken( $body-col, 30% )
+      width: 20px
+      height: 20px
+      border-top: 2px solid darken( $body-col, 50% )
+      border-left: 2px solid darken( $body-col, 50% )
       top: 50%
   .prev
     top: 0
@@ -400,15 +402,18 @@ h2
       right: -129px  
     input
       height: 46px
-      margin-bottom: 30px
+      margin-bottom: 15px
       padding: 0 15px
       font-weight: 700
     input[type=submit]
       @extend %btn
+      font-weight: 400
       width: 220px
       margin: 0 auto
       margin-bottom: 30px
       cursor: pointer
+      border: none
+      outline: 0
     textarea
       padding: 15px
       height: 150px
