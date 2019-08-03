@@ -298,9 +298,6 @@ h2 {
           flex-direction: column;
   position: relative;
   z-index: 200;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .biography .bio-item p {
   margin-bottom: 30px;

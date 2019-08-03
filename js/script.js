@@ -31,27 +31,27 @@
 }());
 
 /*-----------------ANIMATE CSS BIOGR --------------------------*/
-(function () {
-	let header = document.querySelector('header');
-	let bioItem1 = document.querySelector('#anim-col1');
-	let bioItem2 = document.querySelector('#anim-col2');
-	let bioItem3 = document.querySelector('#anim-col3');
-	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+// (function () {
+// 	let header = document.querySelector('header');
+// 	let bioItem1 = document.querySelector('#anim-col1');
+// 	let bioItem2 = document.querySelector('#anim-col2');
+// 	let bioItem3 = document.querySelector('#anim-col3');
+// 	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
-	window.onscroll = function() {
+// 	document.onscroll = function() {
 		
-		if (scrolled < header.offsetHeight) {
-			bioItem1.className = 'bio-item animated slideInLeft';
-			bioItem1.style.opacity = 1;	
-		}
-		if (scrolled < (header.offsetHeight+bioItem1.parentElement.offsetHeight)) {
-			bioItem2.className = 'bio-item animated slideInUp';
-			bioItem2.style.opacity = 1;
-			bioItem3.className = 'bio-item animated slideInRight';
-			bioItem3.style.opacity = 1;
-		}
-	}
-})();
+// 		if (scrolled < header.offsetHeight) {
+// 			bioItem1.className = 'bio-item animated slideInLeft';
+// 			bioItem1.style.opacity = 1;	
+// 		}
+// 		if (scrolled < (header.offsetHeight+bioItem1.parentElement.offsetHeight)) {
+// 			bioItem2.className = 'bio-item animated slideInUp';
+// 			bioItem2.style.opacity = 1;
+// 			bioItem3.className = 'bio-item animated slideInRight';
+// 			bioItem3.style.opacity = 1;
+// 		}
+// 	}
+// })();
 
 /*----------------- GALLERY SLIDER --------------------------*/
 (function () {
@@ -88,10 +88,7 @@
 			count++;
 		}
 		changePics();
-	});
-
-	console.log(btnPrev);
-	
+	});	
 })();
 
 
