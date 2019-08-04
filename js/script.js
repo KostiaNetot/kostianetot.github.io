@@ -53,6 +53,18 @@
 // 	}
 // })();
 
+/*----------------- ARROW UP --------------------------*/
+(function () {
+	let header = document.querySelector('header');
+	let arrowUp = document.querySelector('#arr-up');
+	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+	document.onscroll = function() {
+		if (scrolled >= header.offsetHeight) {
+			arrowUp.style.opacity = '0';
+		}	
+	}
+})();
 /*----------------- GALLERY SLIDER --------------------------*/
 (function () {
 	let sliderWrap = document.querySelector('.gallery-slider-wrap');

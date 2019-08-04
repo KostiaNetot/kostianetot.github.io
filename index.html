@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header>
+  <header id="header">
     <div class="head-slide showing">
       <img src="img/header/1.jpg" alt="">
     </div>
@@ -40,10 +40,10 @@
         </div>
       </nav>
       <div class="head-wrap">
-        <h1>Dmitry Rotkin<br></h1><span>Скрипач на Ваше мероприятие</span>
+        <h1>Dmitry Rotkin<br></h1><span>Скрипач на Ваше<br> мероприятие</span>
         <a href="#contact" class="btn message">Send message</a>
       </div>
-    </div>
+    </div>    
   </header>
 
   <main>    
@@ -52,28 +52,29 @@
         <div class="row">
           <div class="col">
             <h2>Biography</h2>
-            <div class="bio-item revealator-fadein revealator-slideright revealator-once revealator-duration5" id="anim-col1">
-              <p>
+            <div class="bio-item" id="anim-col1">
+              <p class="revealator-slidedown revealator-once revealator-duration10">
                 Dmitry Rotkin Violinist showman whose violin sounds uniquely and diversely in countless musical styles from Classics to contemporary hits covers,from jazz to country and  much more!
                 Foget about the usual petformance of the violinist. Because you will find an unforgettable experience! 
               </p>
-              <div class="wrap-img"><img src="img/main/1.jpg" alt=""></div>
+              <div class="wrap-img revealator-slideright revealator-once revealator-duration10"><img src="img/main/1.jpg" alt=""></div>
             </div>
           </div>
+          <a class="revealator-fade revealator-delay10" href="#header"><span id="arr-up"></span></a>
         </div>
         <div class="row">
           <div class="col">
-            <div class="bio-item bi-1 revealator-fadein revealator-slideup revealator-once revealator-duration5" id="anim-col2">
-              <p>
+            <div class="bio-item bi-1" id="anim-col2">
+              <p class="revealator-zoomin revealator-once revealator-duration10">
                 Dmitry, violinist and showman is an extremely skilled performer who is alwaysseeking innovative means of self expression and performence. He has mastered various techniques including pizzicato, tremolo and can imitate the sound of the balalaika and mandolin, as well percussion instruments.
               </p>
-              <div class="wrap-img"><img src="img/main/2.jpg" alt=""></div>
+              <div class="wrap-img revealator-slideup revealator-once revealator-duration10"><img src="img/main/2.jpg" alt=""></div>
             </div>
           </div>
           <div class="col">
-            <div class="bio-item bi-2 revealator-fadein revealator-slideleft revealator-once revealator-duration5" id="anim-col3">
-              <div class="wrap-img"><img src="img/main/3.jpg" alt=""></div>
-              <p>
+            <div class="bio-item bi-2" id="anim-col3">
+              <div class="wrap-img revealator-slideleft revealator-once revealator-duration10"><img src="img/main/3.jpg" alt=""></div>
+              <p class="revealator-zoomin revealator-once revealator-duration10">
                 Performances are possible starting from solo with quality bek tracks, also trio with guitar and double bass up to big orchestra. If the client wishes we can discuss and create any possible combination of musicians and artists. Not one composition in the repertoire sounds the same twice due to the super improvisations which so successfully complements any piece. 
               </p>
             </div>
@@ -170,7 +171,7 @@
         <div class="foot-item some-info">
           <h3>Dmitry Rotkin</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consequatur esse labore animi laborum debitis.</p>
-          <a href="#" class="btn message">Something here</a>
+          <a href="#contact" class="btn message">Send Message</a>
         </div>
         <div class="foot-item phone">
           <p>(093) 543 41 28</p>
