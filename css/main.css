@@ -82,11 +82,6 @@ body {
   background-color: #292d4a;
 }
 
-.btn-rotated {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 header {
   height: 100vh;
   width: 100%;
@@ -114,12 +109,16 @@ header .showing {
   z-index: -1;
   opacity: 1;
 }
+header .btn-rotated {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
 header .burger-btn {
   position: fixed;
   top: 18px;
   left: 18px;
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
@@ -134,14 +133,12 @@ header .burger-btn {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 9999;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
 }
 header .burger-btn span {
   position: relative;
   content: "";
   display: block;
-  width: 25px;
+  width: 36px;
   height: 3px;
   background-color: #fff;
 }
@@ -734,6 +731,9 @@ h2 {
   overflow: hidden;
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
+}
+.gall-container .gall-item:hover {
+  tranform: scale(1.2);
 }
 
 .gall-footer {

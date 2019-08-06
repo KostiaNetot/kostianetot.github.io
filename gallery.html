@@ -6,8 +6,13 @@
 	<title>Gallery Dmitry Rotkin</title>
 	<link rel="stylesheet" href="css/fm.revealator.jquery.css">
 	<link rel="stylesheet" href="css/main.css">
+	<style>
+	  .btn-rotated {
+	    transform: rotate(90deg);  
+	  }
+	</style>
 </head>
-<body>
+<body id="gall-page">
 	<div class="big-wrapper">
 		<header class="gall-header">
 			<!-- <div class="head-slide showing">
@@ -45,7 +50,7 @@
 		<main class="gall-main">
 			<h2>Gallery</h2>
 			<div class="container gall-container">
-				<div class="gall-item revealator-slideup">
+				<div class="gall-item">
 					<img src="img/gallery/1.jpg" alt="1jpg">
 				</div>
 				<div class="gall-item">
@@ -87,6 +92,7 @@
 				<div class="gall-item">
 					<img src="img/gallery/14.jpg" alt="1jpg">
 				</div>
+				<a class="revealator-fade revealator-delay5" href="#gall-page"><span id="arr-up"></span></a>
 			</div>
 		</main>
 		<footer class="gall-footer">
