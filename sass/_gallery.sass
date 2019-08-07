@@ -12,6 +12,22 @@
 	flex: 1 0 auto
 	h2
 		text-align: center
+	.box-picture-wrap
+		position: fixed
+		display: flex
+		align-items: center
+		justify-content: center
+		top: 0
+		width: 100%
+		height: 100vh
+		background-color: rgba(0,0,0,0.4)
+		z-index: 29
+	.box-picture
+		height: 95vh
+		z-index: 30
+		img
+			width: auto
+			height: 100%
 .gall-container
 	columns: 2
 	column-gap: 10px
@@ -20,8 +36,14 @@
 		margin: 0 0 10px
 		overflow: hidden
 		break-inside: avoid
-	.gall-item:hover
-		tranform: scale(1.2)
+		img 
+			filter: grayscale(.75)
+			transition: all 1s
+		img:hover
+			transform: scale(1.1)
+			filter: grayscale(0)
+			cursor: pointer
+
 
 .gall-footer
 	flex: 0 0 auto

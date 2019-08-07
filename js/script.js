@@ -92,11 +92,20 @@
 		if (document.querySelector('#gall-page')) {
 
 			(function () {
-				let gallItem = document.querySelectorAll('.gall-item');
+				let gallCont = document.querySelector('.gall-container');
+				let gallItem = document.querySelectorAll('.gall-item')
+
+						gallCont.addEventListener('click', function(e){
+							let target = e.target;
+							if(target.tagName == 'IMG') {
+								console.log('works!');
+							}
+						});
 
 				for (var i = 0; i < gallItem.length-1; i++) {
 						gallItem[i].className = "gall-item revealator-slideup";
 					}	
+
 			})(); 	
 
 		}
