@@ -94,10 +94,18 @@
 			(function () {
 				let gallCont = document.querySelector('.gall-container');
 				let gallItem = document.querySelectorAll('.gall-item')
+				let picWrap = document.querySelector('.box-picture-wrap');
+				let picBox = document.querySelector('.box-picture');
 
 						gallCont.addEventListener('click', function(e){
 							let target = e.target;
+							let imgBig = document.createElement('img');
+
 							if(target.tagName == 'IMG') {
+								picWrap.style.transform = 'scale(1)';
+								picBox.appendChild(imgBig);
+
+								imgBig.src = 'img/gallery/12.jpg';
 								console.log('works!');
 							}
 						});
