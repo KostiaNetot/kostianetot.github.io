@@ -730,8 +730,8 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   top: 0;
-  width: 100%;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 29;
   -webkit-transition: all 0.3s;
@@ -739,16 +739,11 @@ h2 {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
-.gall-main .box-picture {
-  height: 95vh;
-  z-index: 30;
-  position: relative;
-}
-.gall-main .box-picture img {
+.gall-main .box-picture-wrap img {
   width: auto;
-  height: 100%;
+  height: 95%;
 }
-.gall-main .box-picture .fa-times-circle {
+.gall-main .box-picture-wrap .fa-times-circle {
   position: absolute;
   top: 10px;
   right: 10px;

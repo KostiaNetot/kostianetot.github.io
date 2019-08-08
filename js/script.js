@@ -95,19 +95,24 @@
 				let gallCont = document.querySelector('.gall-container');
 				let gallItem = document.querySelectorAll('.gall-item')
 				let picWrap = document.querySelector('.box-picture-wrap');
-				let picBox = document.querySelector('.box-picture');
+				// let picBox = document.querySelector('.box-picture');
 
 						gallCont.addEventListener('click', function(e){
-							let target = e.target;
 							let imgBig = document.createElement('img');
 
-							if(target.tagName == 'IMG') {
+							if(e.target.tagName == 'IMG') {
 								picWrap.style.transform = 'scale(1)';
-								picBox.appendChild(imgBig);
+								picWrap.appendChild(imgBig);
+								imgBig.src = e.target.src;
 
-								imgBig.src = 'img/gallery/12.jpg';
-								console.log('works!');
-							}
+								picWrap.addEventListener('click', function(event) {
+									if(event.target.className == 'far fa-times-circle' || event.target == this) {
+										picWrap.style.transform = 'scale(0)';	
+										imgBig.remove();
+									}	
+								})
+								}							
+							
 						});
 
 				for (var i = 0; i < gallItem.length-1; i++) {
