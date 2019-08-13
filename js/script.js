@@ -95,15 +95,37 @@
 				let gallCont = document.querySelector('.gall-container');
 				let gallItem = document.querySelectorAll('.gall-item')
 				let picWrap = document.querySelector('.box-picture-wrap');
-				// let picBox = document.querySelector('.box-picture');
 
 						gallCont.addEventListener('click', function(e){
 							let imgBig = document.createElement('img');
+							let wPort = window.matchMedia("(orientation: portrait)");
 
 							if(e.target.tagName == 'IMG') {
 								picWrap.style.transform = 'scale(1)';
 								picWrap.appendChild(imgBig);
 								imgBig.src = e.target.src;
+
+								if(wPort.matches) {
+									if (imgBig.offsetHeight>window.innerHeight) {
+											imgBig.style.cssText = 
+												'width: auto; height: 95vh;';
+									  }
+									  else {
+									  	imgBig.style.cssText = 
+									  		'width: 95vw; height: auto;';	
+									  }  
+									console.log('Вертикальная ориентация');
+									console.log(imgBig.offsetHeight);
+								} else {  
+										if (imgBig.offsetHeight>window.innerHeight) {
+											imgBig.style.cssText = 
+												'width: auto; height: 95vh;';	
+										}
+										else {
+											imgBig.style.cssText = 
+												'width: 95vw; height: auto;';		
+										}
+								}
 
 								picWrap.addEventListener('click', function(event) {
 									if(event.target.className == 'far fa-times-circle' || event.target == this) {
@@ -115,10 +137,10 @@
 							
 						});
 
-				for (var i = 0; i < gallItem.length-1; i++) {
+				for (var i = 0; i < gallItem.length; i++) {
 						gallItem[i].className = "gall-item revealator-slideup";
 					}	
-
+				
 			})(); 	
 
 		}
