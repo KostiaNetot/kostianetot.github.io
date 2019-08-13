@@ -105,27 +105,47 @@
 								picWrap.appendChild(imgBig);
 								imgBig.src = e.target.src;
 
-								if(wPort.matches) {
-									if (imgBig.offsetHeight>window.innerHeight) {
-											imgBig.style.cssText = 
-												'width: auto; height: 95vh;';
-									  }
-									  else {
-									  	imgBig.style.cssText = 
-									  		'width: 95vw; height: auto;';	
-									  }  
-									console.log('Вертикальная ориентация');
-									console.log(imgBig.offsetHeight);
-								} else {  
+								// if (imgBig.offsetHeight>window.innerHeight) {
+								// 		imgBig.style.cssText = 
+								// 			'width: auto; height: 95vh;';
+								//   }
+								//   else {
+								//   	imgBig.style.cssText = 
+								//   		'width: 95vw; height: auto;';	
+								//   }
+
+								function checkWport() {
+
+									if(wPort.matches) {
 										if (imgBig.offsetHeight>window.innerHeight) {
-											imgBig.style.cssText = 
-												'width: auto; height: 95vh;';	
-										}
-										else {
-											imgBig.style.cssText = 
-												'width: 95vw; height: auto;';		
-										}
+												imgBig.style.cssText = 
+													'width: auto; height: 95vh;';
+										  }
+										  else {
+										  	imgBig.style.cssText = 
+										  		'width: 95vw; height: auto;';	
+										  }  
+										console.log('Вертикальная ориентация');
+										console.log(imgBig.offsetHeight);
+									} else {  
+											if (imgBig.offsetHeight>window.innerHeight) {
+												imgBig.style.cssText = 
+													'width: auto; height: 95vh;';	
+											}
+											else {
+												imgBig.style.cssText = 
+													'width: 95vw; height: auto;';		
+											}
+									}
+										
 								}
+								checkWport();
+
+
+								window.addEventListener('resize', function() {
+									console.log('resize');
+									checkWport();
+								})
 
 								picWrap.addEventListener('click', function(event) {
 									if(event.target.className == 'far fa-times-circle' || event.target == this) {
