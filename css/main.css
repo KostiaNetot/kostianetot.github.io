@@ -790,6 +790,12 @@ h2 {
   font-size: 50px;
   margin-bottom: 50px;
 }
+#proj-page .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 #proj-page .proj-item {
   position: relative;
 }
@@ -804,10 +810,17 @@ h2 {
      object-fit: cover;
 }
 #proj-page .proj-item .col {
-  height: 100vh;
+  min-height: 100vh;
+}
+#proj-page .proj-item .wrap-proj-img {
+  width: 100%;
+  height: 100%;
 }
 #proj-page .proj-item img {
-  width: auto;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #proj-page .proj-item p {
   margin-bottom: 70px;
@@ -1046,6 +1059,13 @@ footer .sub-footer p, footer .sub-footer a {
   .gall-container {
     -webkit-columns: 4;
             columns: 4;
+  }
+
+  #proj-page .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   header .burger-btn {
