@@ -62,11 +62,7 @@
     setInterval(autoSlider, 3000);
 
     function autoSlider() {
-      if (count + 1 == images.length) {
-        count = 0;
-      } else {
-        count++;
-      }
+      count + 1 == images.length ? count = 0 : count++;
       changePics();
     }
     

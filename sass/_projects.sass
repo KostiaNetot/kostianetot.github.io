@@ -1,31 +1,34 @@
 #proj-page
-	h2
-		text-align: center
-	h3
-		font-size: $h1-fsz
-		margin-bottom: 50px
-	.row
-		flex-direction: column
-	.proj-item
-		position: relative
-		.proj-vid
-			width: 375px
-			height: 280px
-		.proj-vid-item
-			width: 100%
-			height: 100%
-			object-fit: cover
-		.col
-			min-height: 100vh
-		.wrap-proj-img
-			width: 100%
-			height: 100%
-		img
-			height: 100%
-			width: 100%
-			object-fit: cover
-		p
-			margin-bottom: 70px
-	.proj-item:nth-child(odd)
-		.proj-img
-			order: 2
+  h2
+    text-align: center
+  .proj-menu
+    font-family: $nav-ff
+    font-size: $proj-menu-fsz
+    display: flex
+    width: 100%
+    justify-content: center
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 70%
+      height: 2px
+      background-color: $body-col
+      top: 50%
+      z-index: -1
+    li
+      margin: 26px
+      cursor: pointer
+      border: 2px solid $body-col
+      padding: 15px 50px
+      background-color: $body-bg
+  .proj-section
+    display: flex
+    flex-direction: column
+    .row
+      justify-content: center
+    .proj-item
+      width: 310px
+      margin: 15px
+
