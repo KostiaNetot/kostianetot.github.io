@@ -8,20 +8,23 @@
     width: 100%
     justify-content: center
     position: relative
+    margin-bottom: 50px
     &:before
       content: ''
       display: block
       position: absolute
       width: 70%
-      height: 2px
+      height: 1px
       background-color: $body-col
       top: 50%
       z-index: -1
     li
-      margin: 26px
+      @extend %center-flex
+      width: 90px
+      margin: 10px
       cursor: pointer
-      border: 2px solid $body-col
-      padding: 15px 50px
+      border: 1px solid $body-col
+      padding: 7px 0
       background-color: $body-bg
   .proj-section
     display: flex
