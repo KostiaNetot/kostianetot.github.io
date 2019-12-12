@@ -11,11 +11,12 @@
 
 Реализовать на чистом JS или если есть навык или желание быстро разобраться на фреймворке Angular.
 
+
+-----Drafts---------------------
 // Client ID
 // ae6d6d2c50611fc34b67
 // Client Secret
 // 63a12636dcf3c6e6bc594c90ea33ed912bdc0389
 
+https://api.github.com/search/repositories?q=${repo}
 // https://api.github.com/repositories?client_id='ae6d6d2c50611fc34b67'&client_secret='63a12636dcf3c6e6bc594c90ea33ed912bdc0389'
-
-// grit  merb-core  rubinius   jsawesome  jspec   exception_logger  ambition

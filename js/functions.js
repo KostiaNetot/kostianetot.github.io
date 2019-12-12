@@ -3,17 +3,6 @@
 const foundRepositories = [];
 let changedReposArr = [];
 
-const checkLocalStorage = () => {
-  if (localStorage.getItem('found-repos')) {
-    let localArr = JSON.parse(localStorage.getItem('found-repos'));
-    localArr.forEach((obj) => {
-      foundRepositories.push(obj);
-    });
-    createCardsfromArr(foundRepositories);
-  }
-  setSearchHeader(foundRepositories.length);
-};
-
 const setSearchHeader = (num) => {
   document.querySelector('#searchInfo').textContent = `Checked ${num} repositories:`;
 };
@@ -21,7 +10,7 @@ const setSearchHeader = (num) => {
 const showFormAlert = (alert) => {
   document.querySelector('#searchInfo').textContent = alert;
   setTimeout(function () {
-    setSearchHeader(foundRepositories.length)
+    // setSearchHeader(foundRepositories.length)
   }, 3000);
 };
 
@@ -39,14 +28,11 @@ const showData = (obj) => {
 
     const newRepo = setNewRepositoryCard(repoId, repoName, repoOwner, repoUrl, ownerUrl, ava);
     insertItemCard(newRepo);
-    setSearchHeader(foundRepositories.length);
 };
 
 const setNewRepositoryCard = (id, name, owner, url, owUrl, ava) => {
   const newRepositoryCard = new RepositoryCard(id, name, owner, url, owUrl, ava);
   foundRepositories.push(newRepositoryCard);
-  localStorage.setItem('found-repos', JSON.stringify(foundRepositories));
-
   return newRepositoryCard;
 };
 
@@ -128,6 +114,6 @@ const removeObjFromArr = (id) => {
     let removeIndex = foundRepositories.map(function(item) { return item.id; }).indexOf(id);
     foundRepositories.splice(removeIndex, 1);
     fillCardsContainer(foundRepositories);
-    localStorage.setItem('found-repos', JSON.stringify(foundRepositories));
+    setSearchHeader(foundRepositories.length);
   }
 };
