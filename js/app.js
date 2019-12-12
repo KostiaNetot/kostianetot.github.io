@@ -25,6 +25,17 @@ const filterBtn = document.getElementById('filterBtn');
     })
   };
 
+const formSearch = document.forms['search-repo'];
+
+formSearch.addEventListener('submit', function (e) {
+  e.preventDefault();
+  setReposData();
+});
+
+function asd() {
+  console.log('asd');
+}
+
 searchBtn.addEventListener('click', () => {
   setReposData();
 });
