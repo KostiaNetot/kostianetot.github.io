@@ -31,7 +31,7 @@ const findRepoInData = (arr, val) => {
 
 const showData = (obj) => {
   let repoId = obj.id,
-    repoName = obj.name,
+    repoName = obj.name.toLowerCase(),
     repoOwner = obj.owner['login'],
     ownerUrl = obj.owner['html_url'],
     repoUrl = obj.html_url,

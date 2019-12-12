@@ -17,7 +17,8 @@ let testUrl = 'test.json';
   };
 
   searchBtn.addEventListener('click', () => {
-    const inputValue = document.getElementById('searchInput').value;
+    let inputValue = document.getElementById('searchInput').value;
+    inputValue = inputValue.toLowerCase();
     if (!!inputValue.trim()) {
       fetchRepositories().then((res) => {
         let foundRepo = findRepoInData(res, inputValue)[0];
