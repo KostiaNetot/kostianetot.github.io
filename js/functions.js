@@ -1,11 +1,14 @@
 'use strict';
 
-let foundRepositories = [];
+const foundRepositories = [];
 let changedReposArr = [];
 
 const checkLocalStorage = () => {
   if (localStorage.getItem('found-repos')) {
-    foundRepositories = JSON.parse(localStorage.getItem('found-repos'));
+    let localArr = JSON.parse(localStorage.getItem('found-repos'));
+    localArr.forEach((obj) => {
+      foundRepositories.push(obj);
+    });
     createCardsfromArr(foundRepositories);
   }
   setSearchHeader(foundRepositories.length);
@@ -67,42 +70,58 @@ const insertItemCard = (obj) => {
   itemCardwrapper.innerHTML += card;
 };
 
+const copyArr = (res, defArr) => {
+  defArr.forEach((obj) => {
+    res.push(obj);
+  });
+  return res;
+};
+
 function sortRepoCards() {
   if (!this.classList.contains('active')) {
-    changedReposArr = foundRepositories.sort((a, b) => {
-      let nameA = a.name.toLowerCase(),
-        nameB = b.name.toLowerCase();
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      return 0;
-    });
-    fillCardsContainer(changedReposArr);
-  } else {
-    foundRepositories = JSON.parse(localStorage.getItem('found-repos'));
-    fillCardsContainer(foundRepositories);
-  }
+      changedReposArr = [];
+      changedReposArr = copyArr(changedReposArr, foundRepositories);
+      changedReposArr = sortArray(changedReposArr);
+      fillCardsContainer(changedReposArr);
+      document.querySelector('#filterBtn').classList.add('invisible');
+    } else {
+      fillCardsContainer(foundRepositories);
+    document.querySelector('#filterBtn').classList.remove('invisible');
+    }
   this.classList.toggle('active');
 };
 
 function filterRepoCards() {
-  if (!this.classList.contains('active')) {
-    let changedReposArr = foundRepositories.filter((item) => (item.id % 2 !== 0));
-    fillCardsContainer(changedReposArr);
-  } else {
-    // foundRepositories = JSON.parse(localStorage.getItem('found-repos'));
-    fillCardsContainer(changedReposArr);
-  }
+    if (!this.classList.contains('active')) {
+      changedReposArr = [];
+      changedReposArr = copyArr(changedReposArr, foundRepositories);
+      changedReposArr = changedReposArr.filter((item) => (item.id % 2 !== 0));
+      fillCardsContainer(changedReposArr);
+      document.querySelector('#sortBtn').classList.add('invisible');
+    } else {
+      fillCardsContainer(foundRepositories);
+      document.querySelector('#sortBtn').classList.remove('invisible');
+    }
   this.classList.toggle('active');
+};
+
+const sortArray = (arr) => {
+  return arr.sort((a, b) => {
+    let nameA = a.name.toLowerCase(),
+      nameB = b.name.toLowerCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
 };
 
 const fillCardsContainer = (arr) => {
   document.getElementById('itemsWrapper').innerHTML = '';
-  foundRepositories = arr;
-  createCardsfromArr(foundRepositories);
+  createCardsfromArr(arr);
 };
 
 const createCardsfromArr = (arr) => {
