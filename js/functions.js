@@ -39,7 +39,7 @@ const showData = (obj) => {
 
     const newRepo = setNewRepositoryCard(repoId, repoName, repoOwner, repoUrl, ownerUrl, ava);
     insertItemCard(newRepo);
-    setSearchHeader(foundRepositories.length)
+    setSearchHeader(foundRepositories.length);
 };
 
 const setNewRepositoryCard = (id, name, owner, url, owUrl, ava) => {
@@ -48,26 +48,6 @@ const setNewRepositoryCard = (id, name, owner, url, owUrl, ava) => {
   localStorage.setItem('found-repos', JSON.stringify(foundRepositories));
 
   return newRepositoryCard;
-};
-
-const insertItemCard = (obj) => {
-  let card = `
-    <div class="item-card" data-id="${obj.id}">
-    <div class="item-card-inner-wrap">
-      <div class="img-wrapper">
-        <img class="avatar" src="${obj.ava}" alt="avatar">
-      </div>
-      <div class="text-wrapper">
-        <h5 class="nameInfo">${obj.name}</h5>
-        <p>id: <span class="bold idInfo">#${obj.id}</span></p>
-        <p>owner: <a class="bold owner-info" href="${obj.owUrl}" target="_blank" title="owner page">${obj.owner}</a></p>
-        <p><a class="link link-info" target="_blank" href="${obj.url}" title="repos page">repository link...</a></p>
-      </div>
-    </div>
-  </div>
-`;
-  let itemCardwrapper = document.getElementById('itemsWrapper');
-  itemCardwrapper.innerHTML += card;
 };
 
 const copyArr = (res, defArr) => {
@@ -128,4 +108,26 @@ const createCardsfromArr = (arr) => {
   arr.forEach((obj) => {
     insertItemCard(obj);
   });
+};
+
+const setEvent = (cards) => {
+  for (let i = 0; i < cards.length; i++) {
+    let removeBtn = cards[i].querySelector('.remove');
+    removeBtn.addEventListener('click', removeCard);
+  }
+};
+
+function removeCard() {
+  let card = this.closest('.item-card');
+  let cardId = parseInt(card.getAttribute('data-id'));
+  removeObjFromArr(cardId);
+}
+
+const removeObjFromArr = (id) => {
+  if (confirm('Remove item?')) {
+    let removeIndex = foundRepositories.map(function(item) { return item.id; }).indexOf(id);
+    foundRepositories.splice(removeIndex, 1);
+    fillCardsContainer(foundRepositories);
+    localStorage.setItem('found-repos', JSON.stringify(foundRepositories));
+  }
 };

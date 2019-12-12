@@ -122,7 +122,13 @@ header {
 
 .item-card {
   width: 100%;
-  padding: 5px; }
+  padding: 5px;
+  position: relative; }
+  .item-card .remove {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    cursor: pointer; }
   .item-card .item-card-inner-wrap {
     padding: 10px;
     background-color: #fcfcfc;
@@ -187,7 +193,12 @@ footer {
     width: 100%;
     font-size: 1.2em; }
   .form-wrapper button {
-    padding: 15px; } }
+    padding: 15px; }
+  .form-wrapper #searchInput {
+    font-size: 1.4em;
+    order: -2; }
+  .form-wrapper .search-btn {
+    order: -1; } }
 @media (min-width: 768px) {
   .container {
     max-width: 720px; }
