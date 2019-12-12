@@ -14,6 +14,8 @@ const filterBtn = document.getElementById('filterBtn');
   const setReposData = () => {
     fetchRepositories(inputValue.value).then((res) => {
       let resArr = res.items;
+      foundRepositories.splice(0, foundRepositories.length);
+      document.getElementById('itemsWrapper').innerHTML = '';
       resArr.forEach((obj) => {
         showData(obj);
       });

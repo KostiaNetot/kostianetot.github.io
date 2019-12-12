@@ -64,9 +64,11 @@ function filterRepoCards() {
       changedReposArr = changedReposArr.filter((item) => (item.id % 2 !== 0));
       fillCardsContainer(changedReposArr);
       document.querySelector('#sortBtn').classList.add('invisible');
+      setSearchHeader(changedReposArr.length);
     } else {
       fillCardsContainer(foundRepositories);
       document.querySelector('#sortBtn').classList.remove('invisible');
+      setSearchHeader(foundRepositories.length);
     }
   this.classList.toggle('active');
 };
