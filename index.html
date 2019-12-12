@@ -1,208 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Dmitry Rotkin</title>
-  <link rel="stylesheet" href="css/fm.revealator.jquery.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test Task Aleksieienko</title>
   <link rel="stylesheet" href="css/main.css">
-  <!-- <style>
-    .btn-rotated {
-      transform: rotate(90deg);  
-    }
-  </style> -->
 </head>
-<body id="main-page">
-  <header id="header">
-    <div class="head-slide showing">
-      <img src="img/header/1.jpg" alt="">
+<body>
+<header>
+  <div class="container">
+    <div class="header-wrapper">
+      <div class="logo-wrapper"></div>
+      <h1>Let's find some repositories</h1>
     </div>
-    <div class="head-slide">
-      <img src="img/header/2.jpg" alt="">
-    </div>
-    <div class="head-slide">
-      <img src="img/header/3.jpg" alt="">
-    </div>
-    <div class="head-slide">
-      <img src="img/header/4.jpg" alt="">
-    </div>
-    <div class="container">
-      <div class="burger-btn">
-        <span></span>
-      </div>
-      <nav>
-        <ul class="list-navigation">
-          <li><a href="#">Home</a></li>
-          <li><a href="#bioAnch">Biography</a></li>
-          <li><a href="#gallAnch">Gallery</a></li>
-          <li><a href="#projAnch">Projects</a></li>
-          <li><a href="#contAnch">Contact</a></li>
-        </ul>
-        <div class="social-head">
-          <a href="https://www.youtube.com/channel/UCy8lehFgVG9kYZTkHCI_Lww" target="_blank"></a>
-          <a href="https://www.facebook.com/DmitryRotkinART/" target="_blank"></a>
-          <a href="https://www.instagram.com/dmitry_rotkin/" target="_blank"></a>
-        </div>
-      </nav>
-      <div class="head-wrap">
-        <h1>Dmitry Rotkin<br></h1><span>Amazing Violinist<br></span>
-        <a href="#contact" class="btn message">Send message</a>
-      </div>
-    </div>    
-  </header>
-
-  <main>    
-    <section class="biography" id="bioAnch">
+  </div>
+</header>
+<div class="grand-wrapper">
+  <main>
+    <div class="form-section">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2>Biography</h2>
-            <div class="bio-item" id="anim-col1">
-              <p class="revealator-slidedown revealator-once revealator-duration10">
-                Dmitry Rotkin Violinist showman whose violin sounds uniquely and diversely in countless musical styles from Classics to contemporary hits covers,from jazz to country and  much more!
-                Foget about the usual petformance of the violinist. Because you will find an unforgettable experience! 
-              </p>
-              <div class="wrap-img revealator-slideright revealator-once revealator-duration10"><img src="img/main/1.jpg" alt=""></div>
+        <div class="form-wrapper">
+          <form name="search-repo">
+            <div class="inner-wrap">
+              <button id="filterBtn" class="second-btn" type="button">Show odd ID</button>
+              <button id="sortBtn" class="second-btn" type="button">Sort a-z</button>
+              <input type="text" id="searchInput" placeholder="microsis, thin , jspec, grit etc...">
+              <button id="searchBtn" class="search-btn" type="button">Search</button>
             </div>
-          </div>
-          <a class="revealator-fade revealator-delay10" href="#header"><span id="arr-up"></span></a>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="bio-item bi-1" id="anim-col2">
-              <p class="revealator-zoomin revealator-once revealator-duration10">
-                Dmitry, violinist and showman is an extremely skilled performer who is alwaysseeking innovative means of self expression and performence. He has mastered various techniques including pizzicato, tremolo and can imitate the sound of the balalaika and mandolin, as well percussion instruments.
-              </p>
-              <div class="wrap-img revealator-slideup revealator-once revealator-duration10"><img src="img/main/2.jpg" alt=""></div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="bio-item bi-2" id="anim-col3">
-              <div class="wrap-img revealator-slideleft revealator-once revealator-duration10"><img src="img/main/3.jpg" alt=""></div>
-              <p class="revealator-zoomin revealator-once revealator-duration10">
-                Performances are possible starting from solo with quality bek tracks, also trio with guitar and double bass up to big orchestra. If the client wishes we can discuss and create any possible combination of musicians and artists. Not one composition in the repertoire sounds the same twice due to the super improvisations which so successfully complements any piece. 
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="gallery" id="gallAnch">
-      <div class="container">
-        <a href="gallery.html"><h2>Gallery</h2></a>
-        <div class="gallery-slider-wrap">
-          <div class="prev"></div>
-          <div class="next"></div>
-          <div class="gallery-slider">
-            <a href="gallery.html"><img class="slider-item" src="img/main/img/1.jpg" alt=""></a>
-            <a href="gallery.html"><img class="slider-item" src="img/main/img/2.jpg" alt=""></a>
-            <a href="gallery.html">
-              <img class="slider-item" src="img/main/img/3.jpg" alt="">
-            </a>
-            <a href="gallery.html"><img class="slider-item" src="img/main/img/4.jpg" alt=""></a>
-            <a href="gallery.html"><img class="slider-item" src="img/main/img/5.jpg" alt=""></a>
-          </div>
-        </div>  
-      </div>
-    </section>
-    
-    <section class="projects" id="projAnch">
-      <div class="container">
-        <h2><a href="projects.html">Projects</a></h2>
-        <div class="row">
-          <div class="projects-slider">
-            <div class="projects-slider-cont">
-              <div class="inner-row">
-                <a href=""><iframe class="slide-pic" width="560" height="315" src="https://www.youtube.com/embed/46HNbICtHQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                <a href=""><iframe class="slide-pic" width="560" height="315" src="https://www.youtube.com/embed/ekWgoRsNO1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-              </div>
-              <div class="inner-row">
-                <a href=""><iframe class="slide-pic" width="560" height="315" src="https://www.youtube.com/embed/-j9W8rNs8MY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                <a href=""><iframe class="slide-pic" width="560" height="315" src="https://www.youtube.com/embed/kULoA2t-xUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-              </div>
-            </div>   
-          </div>
-          <div class="wrap-proj-btn">
-            <a href="projects.html" class="btn more-proj">More</a>
-          </div>  
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contAnch">
-      <div class="container">
-        <h2 id="contact">Contact</h2>
-        <div class="row">
-          <form id="form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="text" name="phone" placeholder="Your Phone" required>
-            <input type="text" name="email" placeholder="Your e-mail" required>  
-            <textarea name="text" placeholder="Your message"></textarea>
-            <!-- <button>Send Message</button> -->
-            <input type="submit" class="btn" value="Send Message">
           </form>
-          <div class="cotact-info">
-            <p>(093) 543 41 28</p>
-            <p>(098) 245 78 05</p>
-            <div class="social-contact">
-              <a href=""></a>
-              <a href=""></a>
-              <a href=""></a>  
-            </div>
-          </div>
         </div>
       </div>
-    </section>
-    
-    <section class="reviews">
-      <div class="container">
-        <h2>Reviews</h2>
-        <div class="row">
-          <div class="review-item">
-            <div class="wrap-img"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod id natus voluptatibus facilis impedit quae porro laborum accusantium unde officia consequuntur, inventore vitae cumque, placeat.</p>
-          </div>
-          <div class="review-item">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolores quaerat magni eaque sit suscipit minima earum, ratione dolore, aperiam et inventore commodi molestias soluta.</p>
-            <div class="wrap-img"></div>
-          </div>
+    </div>
+    <!--  form-section-->
+    <div class="item-cards-section">
+      <div class="header-wrapper container">
+        <h2 id="searchInfo"></h2>
+      </div>
+      <div class="cards-wrapper container">
+        <div class="row" id="itemsWrapper">
+
+          <!--      row-->
         </div>
       </div>
-    </section>
-  
+      <!--  item-cards-section-->
   </main>
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="foot-item some-info">
-          <h3>Dmitry Rotkin</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consequatur esse labore animi laborum debitis.</p>
-          <a href="#contact" class="btn message">Send Message</a>
-        </div>
-        <div class="foot-item phone">
-          <p>(093) 543 41 28</p>
-        </div>
-        <div class="foot-item email">
-          <p>rotkin@gmail.com</p>
-        </div>  
-        <div class="foot-item foot-social">
-          <a href="https://www.youtube.com/channel/UCy8lehFgVG9kYZTkHCI_Lww" target="_blank"></a>
-          <a href="https://www.facebook.com/DmitryRotkinART/" target="_blank"></a>
-          <a href="https://www.instagram.com/dmitry_rotkin/" target="_blank"></a>
-        </div>
-      </div>
-      <div class="sub-footer">
-        <p>Created by: <a href="mailto:pugjazz@gmail.com?subject=Develope Site">pugjazz@gmail.com</a></p>
-      </div>  
+    <div class="container footer-container">
+      <p>created by <a target="_blank" href="mailto:pugjazz@gmail.com">Kostia</a></p>
     </div>
-  </footer>  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src=common.js></script>
-  <script src="js/fm.revealator.jquery.js"></script>
+  </footer>
+</div>
 
-  <script src="js/functions.js"></script>
-<!--  <script src="js/script.js"></script>-->
-  <script src="js/app.js"></script>
+
+<script src="js/RepositoryCard.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/creatingElement.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

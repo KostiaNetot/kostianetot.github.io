@@ -1,0 +1,43 @@
+.item-cards-section
+  .header-wrapper
+    margin-top: 16px
+    margin-bottom: 16px
+  h2
+    font-size: 1.2em
+    color: darken($mainFont-col, 10%)
+  .row
+    flex-wrap: wrap
+
+.item-card
+  width: 100%
+  padding: 5px
+  .item-card-inner-wrap
+    padding: 10px
+    background-color: darken($hoverCad-bg, 1%)
+    display: flex
+    flex-direction: column
+    align-items: center
+    transition: all .2s
+    &:hover
+      background-color: $hoverCad-bg
+    .img-wrapper
+      width: 85%
+      border-radius: 50%
+      overflow: hidden
+      margin-bottom: 20px
+    .text-wrapper
+      text-align: center
+      font-size: 0.9em
+      h5
+        text-transform: uppercase
+        font-weight: 800
+        font-size: 0.8em
+        color: darken($mainFont-col, 10%)
+        padding: 8px 0
+      p
+        padding: 5px 0
+      .link
+        color: $link-col
+        transition: all .2s
+        &:hover
+          color: lighten($link-col, 10%)

@@ -1,0 +1,33 @@
+.form-wrapper
+  background-color: $form-bg
+  padding: 20px 15px
+  .inner-wrap
+    display: flex
+  .inner-wrap > *
+    margin: 0 4px
+  input
+    background-color: $input-bg
+    padding: 7px 10px
+    color: $mainFont-col
+    flex: 1
+    border-bottom: 1px solid transparent
+    &:focus
+      border-bottom: 1px solid lighten(grey, 20%)
+  input::placeholder
+    color: lighten($mainFont-col, 30%)
+  .second-btn
+    background-color: $filterBtn-bg
+    &:hover
+      background-color: lighten($filterBtn-bg, 10%)
+  .search-btn
+    background-color: $searchBtn-bg
+    width: 160px
+    &:hover
+      background-color: darken($searchBtn-bg, 10%)
+  .form-alert
+    color: $alert-col
+    text-align: center
+  button.active
+    background-color: $activeBtn-bg
+    &:hover
+      background-color: $activeBtn-bg
