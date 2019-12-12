@@ -19,6 +19,7 @@ const filterBtn = document.getElementById('filterBtn');
       resArr.forEach((obj) => {
         showData(obj);
       });
+      document.forms['search-repo'].reset();
     }).then(() => {
       setSearchHeader(foundRepositories.length)
     })
